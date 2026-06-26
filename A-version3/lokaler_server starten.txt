@@ -1,0 +1,35 @@
+
+an Konsole:
+cd \Users\misch\lede_homework_achiv\project1
+py -m http.server 8001
+
+
+Wenn es nochmals merkwürdig wird:
+netstat -ano | findstr :8001
+
+und die PID mit
+
+taskkill /PID NUMMER /F
+
+beenden.
+
+Und so findet man die Pid nummmer
+TCP    0.0.0.0:8001    0.0.0.0:0    ABHÖREN    16236
+
+Die PID ist also:
+
+16236
+
+Dann verwendest du genau diese Zahl:
+
+taskkill /PID 16236 /F
+
+Merke dir diese Diagnose:
+
+netstat -ano | findstr :8001
+
+Wenn dort ABHÖREN steht, läuft schon ein Server.
+
+Dann beenden:
+
+taskkill /PID ZAHL_RECHTS /F
