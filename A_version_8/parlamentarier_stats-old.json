@@ -1,0 +1,2090 @@
+[
+  {
+    "index": 0,
+    "person_code": 2513,
+    "author": "Maillard Pierre-Yves",
+    "total": 1,
+    "motionen": 0.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 1,
+    "person_code": 2569,
+    "author": "Graf Maya",
+    "total": 8,
+    "motionen": 2.0,
+    "postulate": 1.0,
+    "interpellationen": 5.0
+  },
+  {
+    "index": 2,
+    "person_code": 2575,
+    "author": "Germann Hannes",
+    "total": 4,
+    "motionen": 3.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 3,
+    "person_code": 2585,
+    "author": "Bäumle Martin",
+    "total": 2,
+    "motionen": 0.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 4,
+    "person_code": 2600,
+    "author": "Häberli-Koller Brigitte",
+    "total": 2,
+    "motionen": 1.0,
+    "postulate": 1.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 5,
+    "person_code": 2623,
+    "author": "Pfister Gerhard",
+    "total": 3,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 6,
+    "person_code": 2631,
+    "author": "Schwander Pirmin",
+    "total": 3,
+    "motionen": 3.0,
+    "postulate": 0.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 7,
+    "person_code": 2632,
+    "author": "Sommaruga Carlo",
+    "total": 9,
+    "motionen": 4.0,
+    "postulate": 3.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 8,
+    "person_code": 2693,
+    "author": "Hurter Thomas",
+    "total": 3,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 9,
+    "person_code": 2700,
+    "author": "Moser Tiana Angelina",
+    "total": 6,
+    "motionen": 5.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 10,
+    "person_code": 2702,
+    "author": "Nussbaumer Eric",
+    "total": 1,
+    "motionen": 0.0,
+    "postulate": 1.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 11,
+    "person_code": 2704,
+    "author": "Reimann Lukas",
+    "total": 12,
+    "motionen": 6.0,
+    "postulate": 2.0,
+    "interpellationen": 4.0
+  },
+  {
+    "index": 12,
+    "person_code": 2715,
+    "author": "Wasserfallen Christian",
+    "total": 5,
+    "motionen": 1.0,
+    "postulate": 2.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 13,
+    "person_code": 2732,
+    "author": "Prelicz-Huber Katharina",
+    "total": 10,
+    "motionen": 2.0,
+    "postulate": 2.0,
+    "interpellationen": 6.0
+  },
+  {
+    "index": 14,
+    "person_code": 2748,
+    "author": "Schneider-Schneiter Elisabeth",
+    "total": 13,
+    "motionen": 1.0,
+    "postulate": 1.0,
+    "interpellationen": 11.0
+  },
+  {
+    "index": 15,
+    "person_code": 2752,
+    "author": "Quadri Lorenzo",
+    "total": 44,
+    "motionen": 18.0,
+    "postulate": 1.0,
+    "interpellationen": 25.0
+  },
+  {
+    "index": 16,
+    "person_code": 2757,
+    "author": "de Courten Thomas",
+    "total": 7,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 6.0
+  },
+  {
+    "index": 17,
+    "person_code": 2758,
+    "author": "Aeschi Thomas",
+    "total": 4,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 3.0
+  },
+  {
+    "index": 18,
+    "person_code": 2759,
+    "author": "Wermuth Cédric",
+    "total": 8,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 6.0
+  },
+  {
+    "index": 19,
+    "person_code": 2762,
+    "author": "Badran Jacqueline",
+    "total": 1,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 20,
+    "person_code": 2765,
+    "author": "Flach Beat",
+    "total": 15,
+    "motionen": 3.0,
+    "postulate": 3.0,
+    "interpellationen": 9.0
+  },
+  {
+    "index": 21,
+    "person_code": 2766,
+    "author": "Schneeberger Daniela",
+    "total": 4,
+    "motionen": 4.0,
+    "postulate": 0.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 22,
+    "person_code": 2768,
+    "author": "Engler Stefan",
+    "total": 1,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 23,
+    "person_code": 2770,
+    "author": "Candinas Martin",
+    "total": 6,
+    "motionen": 3.0,
+    "postulate": 0.0,
+    "interpellationen": 3.0
+  },
+  {
+    "index": 24,
+    "person_code": 2771,
+    "author": "Müller-Altermatt Stefan",
+    "total": 7,
+    "motionen": 0.0,
+    "postulate": 1.0,
+    "interpellationen": 6.0
+  },
+  {
+    "index": 25,
+    "person_code": 2776,
+    "author": "Regazzi Fabio",
+    "total": 12,
+    "motionen": 5.0,
+    "postulate": 1.0,
+    "interpellationen": 6.0
+  },
+  {
+    "index": 26,
+    "person_code": 2778,
+    "author": "Fridez Pierre-Alain",
+    "total": 5,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 4.0
+  },
+  {
+    "index": 27,
+    "person_code": 2783,
+    "author": "Schmid Martin",
+    "total": 3,
+    "motionen": 3.0,
+    "postulate": 0.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 28,
+    "person_code": 2786,
+    "author": "Grossen Jürg",
+    "total": 15,
+    "motionen": 4.0,
+    "postulate": 1.0,
+    "interpellationen": 10.0
+  },
+  {
+    "index": 29,
+    "person_code": 2789,
+    "author": "Feller Olivier",
+    "total": 12,
+    "motionen": 3.0,
+    "postulate": 0.0,
+    "interpellationen": 9.0
+  },
+  {
+    "index": 30,
+    "person_code": 2796,
+    "author": "Amaudruz Céline",
+    "total": 7,
+    "motionen": 3.0,
+    "postulate": 1.0,
+    "interpellationen": 3.0
+  },
+  {
+    "index": 31,
+    "person_code": 2799,
+    "author": "Hess Lorenz",
+    "total": 1,
+    "motionen": 0.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 32,
+    "person_code": 3003,
+    "author": "Glättli Balthasar",
+    "total": 13,
+    "motionen": 5.0,
+    "postulate": 2.0,
+    "interpellationen": 6.0
+  },
+  {
+    "index": 33,
+    "person_code": 3009,
+    "author": "Piller Carrard Valérie",
+    "total": 5,
+    "motionen": 0.0,
+    "postulate": 0.0,
+    "interpellationen": 5.0
+  },
+  {
+    "index": 34,
+    "person_code": 3012,
+    "author": "Müller Leo",
+    "total": 4,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 35,
+    "person_code": 3016,
+    "author": "Bertschy Kathrin",
+    "total": 2,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 36,
+    "person_code": 3017,
+    "author": "Bulliard-Marbach Christine",
+    "total": 9,
+    "motionen": 2.0,
+    "postulate": 4.0,
+    "interpellationen": 3.0
+  },
+  {
+    "index": 37,
+    "person_code": 3023,
+    "author": "Gössi Petra",
+    "total": 2,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 38,
+    "person_code": 3024,
+    "author": "Lohr Christian",
+    "total": 13,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 12.0
+  },
+  {
+    "index": 39,
+    "person_code": 3026,
+    "author": "Gysi Barbara",
+    "total": 10,
+    "motionen": 1.0,
+    "postulate": 1.0,
+    "interpellationen": 8.0
+  },
+  {
+    "index": 40,
+    "person_code": 3029,
+    "author": "Schilliger Peter",
+    "total": 4,
+    "motionen": 3.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 41,
+    "person_code": 3030,
+    "author": "Rutz Gregor",
+    "total": 1,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 42,
+    "person_code": 3032,
+    "author": "Trede Aline",
+    "total": 11,
+    "motionen": 3.0,
+    "postulate": 1.0,
+    "interpellationen": 7.0
+  },
+  {
+    "index": 43,
+    "person_code": 3034,
+    "author": "Masshardt Nadine",
+    "total": 6,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 5.0
+  },
+  {
+    "index": 44,
+    "person_code": 3035,
+    "author": "Friedl Claudia",
+    "total": 10,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 8.0
+  },
+  {
+    "index": 45,
+    "person_code": 3039,
+    "author": "Golay Roger",
+    "total": 12,
+    "motionen": 9.0,
+    "postulate": 1.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 46,
+    "person_code": 3043,
+    "author": "Portmann Hans-Peter",
+    "total": 3,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 47,
+    "person_code": 3044,
+    "author": "Walti Beat",
+    "total": 2,
+    "motionen": 0.0,
+    "postulate": 1.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 48,
+    "person_code": 3046,
+    "author": "Matter Thomas",
+    "total": 3,
+    "motionen": 0.0,
+    "postulate": 1.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 49,
+    "person_code": 3052,
+    "author": "Dittli Josef",
+    "total": 10,
+    "motionen": 2.0,
+    "postulate": 2.0,
+    "interpellationen": 6.0
+  },
+  {
+    "index": 50,
+    "person_code": 3053,
+    "author": "Hegglin Peter",
+    "total": 3,
+    "motionen": 1.0,
+    "postulate": 1.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 51,
+    "person_code": 3054,
+    "author": "Wicki Hans",
+    "total": 5,
+    "motionen": 1.0,
+    "postulate": 1.0,
+    "interpellationen": 3.0
+  },
+  {
+    "index": 52,
+    "person_code": 3055,
+    "author": "Addor Jean-Luc",
+    "total": 20,
+    "motionen": 9.0,
+    "postulate": 0.0,
+    "interpellationen": 11.0
+  },
+  {
+    "index": 53,
+    "person_code": 3058,
+    "author": "Arslan Sibel",
+    "total": 10,
+    "motionen": 2.0,
+    "postulate": 2.0,
+    "interpellationen": 6.0
+  },
+  {
+    "index": 54,
+    "person_code": 3062,
+    "author": "Buffat Michaël",
+    "total": 8,
+    "motionen": 3.0,
+    "postulate": 0.0,
+    "interpellationen": 5.0
+  },
+  {
+    "index": 55,
+    "person_code": 3063,
+    "author": "Bühler Manfred",
+    "total": 2,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 56,
+    "person_code": 3064,
+    "author": "Burgherr Thomas",
+    "total": 10,
+    "motionen": 7.0,
+    "postulate": 0.0,
+    "interpellationen": 3.0
+  },
+  {
+    "index": 57,
+    "person_code": 3065,
+    "author": "Burkart Thierry",
+    "total": 4,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 58,
+    "person_code": 3067,
+    "author": "Chiesa Marco",
+    "total": 9,
+    "motionen": 9.0,
+    "postulate": 0.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 59,
+    "person_code": 3070,
+    "author": "Dobler Marcel",
+    "total": 7,
+    "motionen": 3.0,
+    "postulate": 0.0,
+    "interpellationen": 4.0
+  },
+  {
+    "index": 60,
+    "person_code": 3071,
+    "author": "Fehlmann Rielle Laurence",
+    "total": 7,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 5.0
+  },
+  {
+    "index": 61,
+    "person_code": 3074,
+    "author": "Glarner Andreas",
+    "total": 9,
+    "motionen": 3.0,
+    "postulate": 4.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 62,
+    "person_code": 3075,
+    "author": "Gmür-Schönenberger Andrea",
+    "total": 7,
+    "motionen": 5.0,
+    "postulate": 1.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 63,
+    "person_code": 3076,
+    "author": "Grüter Franz",
+    "total": 4,
+    "motionen": 0.0,
+    "postulate": 0.0,
+    "interpellationen": 4.0
+  },
+  {
+    "index": 64,
+    "person_code": 3078,
+    "author": "Hess Erich",
+    "total": 1,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 65,
+    "person_code": 3080,
+    "author": "Imark Christian",
+    "total": 8,
+    "motionen": 2.0,
+    "postulate": 1.0,
+    "interpellationen": 5.0
+  },
+  {
+    "index": 66,
+    "person_code": 3084,
+    "author": "Marti Min Li",
+    "total": 11,
+    "motionen": 3.0,
+    "postulate": 2.0,
+    "interpellationen": 6.0
+  },
+  {
+    "index": 67,
+    "person_code": 3087,
+    "author": "Meyer Mattea",
+    "total": 2,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 68,
+    "person_code": 3088,
+    "author": "Nantermod Philippe",
+    "total": 8,
+    "motionen": 5.0,
+    "postulate": 0.0,
+    "interpellationen": 3.0
+  },
+  {
+    "index": 69,
+    "person_code": 3089,
+    "author": "Nicolet Jacques",
+    "total": 11,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 9.0
+  },
+  {
+    "index": 70,
+    "person_code": 3090,
+    "author": "Page Pierre-André",
+    "total": 4,
+    "motionen": 0.0,
+    "postulate": 0.0,
+    "interpellationen": 4.0
+  },
+  {
+    "index": 71,
+    "person_code": 3092,
+    "author": "Salzmann Werner",
+    "total": 6,
+    "motionen": 4.0,
+    "postulate": 1.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 72,
+    "person_code": 3094,
+    "author": "Seiler Graf Priska",
+    "total": 8,
+    "motionen": 1.0,
+    "postulate": 1.0,
+    "interpellationen": 6.0
+  },
+  {
+    "index": 73,
+    "person_code": 3095,
+    "author": "Sollberger Sandra",
+    "total": 3,
+    "motionen": 0.0,
+    "postulate": 0.0,
+    "interpellationen": 3.0
+  },
+  {
+    "index": 74,
+    "person_code": 3096,
+    "author": "Steinemann Barbara",
+    "total": 7,
+    "motionen": 3.0,
+    "postulate": 2.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 75,
+    "person_code": 3097,
+    "author": "Tuena Mauro",
+    "total": 2,
+    "motionen": 0.0,
+    "postulate": 0.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 76,
+    "person_code": 3099,
+    "author": "Walliser Bruno",
+    "total": 5,
+    "motionen": 3.0,
+    "postulate": 0.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 77,
+    "person_code": 3102,
+    "author": "Zuberbühler David",
+    "total": 6,
+    "motionen": 3.0,
+    "postulate": 0.0,
+    "interpellationen": 3.0
+  },
+  {
+    "index": 78,
+    "person_code": 3103,
+    "author": "Sauter Regine",
+    "total": 2,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 79,
+    "person_code": 3105,
+    "author": "Rieder Beat",
+    "total": 4,
+    "motionen": 3.0,
+    "postulate": 1.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 80,
+    "person_code": 3107,
+    "author": "Ettlin Erich",
+    "total": 1,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 81,
+    "person_code": 3108,
+    "author": "Müller Damian",
+    "total": 10,
+    "motionen": 3.0,
+    "postulate": 0.0,
+    "interpellationen": 7.0
+  },
+  {
+    "index": 82,
+    "person_code": 3109,
+    "author": "Jauslin Matthias Samuel",
+    "total": 10,
+    "motionen": 5.0,
+    "postulate": 1.0,
+    "interpellationen": 4.0
+  },
+  {
+    "index": 83,
+    "person_code": 3114,
+    "author": "Bendahan Samuel",
+    "total": 3,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 84,
+    "person_code": 3115,
+    "author": "Gugger Niklaus-Samuel",
+    "total": 10,
+    "motionen": 1.0,
+    "postulate": 3.0,
+    "interpellationen": 6.0
+  },
+  {
+    "index": 85,
+    "person_code": 3117,
+    "author": "Gutjahr Diana",
+    "total": 4,
+    "motionen": 1.0,
+    "postulate": 1.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 86,
+    "person_code": 3120,
+    "author": "Crottaz Brigitte",
+    "total": 6,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 5.0
+  },
+  {
+    "index": 87,
+    "person_code": 3121,
+    "author": "Roduit Benjamin",
+    "total": 12,
+    "motionen": 5.0,
+    "postulate": 2.0,
+    "interpellationen": 5.0
+  },
+  {
+    "index": 88,
+    "person_code": 3122,
+    "author": "Töngi Michael",
+    "total": 10,
+    "motionen": 0.0,
+    "postulate": 1.0,
+    "interpellationen": 9.0
+  },
+  {
+    "index": 89,
+    "person_code": 3123,
+    "author": "Paganini Nicolò",
+    "total": 2,
+    "motionen": 0.0,
+    "postulate": 0.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 90,
+    "person_code": 3124,
+    "author": "Molina Fabian",
+    "total": 30,
+    "motionen": 11.0,
+    "postulate": 0.0,
+    "interpellationen": 19.0
+  },
+  {
+    "index": 91,
+    "person_code": 3125,
+    "author": "Wasserfallen Flavia",
+    "total": 3,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 92,
+    "person_code": 3129,
+    "author": "Marti Samira",
+    "total": 2,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 93,
+    "person_code": 3130,
+    "author": "Egger Mike",
+    "total": 16,
+    "motionen": 4.0,
+    "postulate": 0.0,
+    "interpellationen": 12.0
+  },
+  {
+    "index": 94,
+    "person_code": 3131,
+    "author": "Bregy Philipp Matthias",
+    "total": 6,
+    "motionen": 2.0,
+    "postulate": 2.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 95,
+    "person_code": 3134,
+    "author": "Haab Martin",
+    "total": 1,
+    "motionen": 0.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 96,
+    "person_code": 3135,
+    "author": "Schläpfer Therese",
+    "total": 1,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 97,
+    "person_code": 3136,
+    "author": "Würth Benedikt",
+    "total": 7,
+    "motionen": 5.0,
+    "postulate": 1.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 98,
+    "person_code": 3137,
+    "author": "Andrey Gerhard",
+    "total": 4,
+    "motionen": 2.0,
+    "postulate": 1.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 99,
+    "person_code": 3138,
+    "author": "Badertscher Christine",
+    "total": 10,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 9.0
+  },
+  {
+    "index": 100,
+    "person_code": 3139,
+    "author": "Baumann Kilian",
+    "total": 4,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 101,
+    "person_code": 3141,
+    "author": "Binder-Keller Marianne",
+    "total": 10,
+    "motionen": 6.0,
+    "postulate": 4.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 102,
+    "person_code": 3144,
+    "author": "Christ Katja",
+    "total": 14,
+    "motionen": 1.0,
+    "postulate": 7.0,
+    "interpellationen": 6.0
+  },
+  {
+    "index": 103,
+    "person_code": 3145,
+    "author": "Clivaz Christophe",
+    "total": 20,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 18.0
+  },
+  {
+    "index": 104,
+    "person_code": 3146,
+    "author": "Cottier Damien",
+    "total": 6,
+    "motionen": 2.0,
+    "postulate": 1.0,
+    "interpellationen": 3.0
+  },
+  {
+    "index": 105,
+    "person_code": 3147,
+    "author": "Dandrès Christian",
+    "total": 9,
+    "motionen": 2.0,
+    "postulate": 1.0,
+    "interpellationen": 6.0
+  },
+  {
+    "index": 106,
+    "person_code": 3148,
+    "author": "de Montmollin Simone",
+    "total": 5,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 3.0
+  },
+  {
+    "index": 107,
+    "person_code": 3149,
+    "author": "de Quattro Jacqueline",
+    "total": 16,
+    "motionen": 4.0,
+    "postulate": 3.0,
+    "interpellationen": 8.0
+  },
+  {
+    "index": 108,
+    "person_code": 3151,
+    "author": "Farinelli Alex",
+    "total": 12,
+    "motionen": 3.0,
+    "postulate": 2.0,
+    "interpellationen": 7.0
+  },
+  {
+    "index": 109,
+    "person_code": 3152,
+    "author": "Fivaz Fabien",
+    "total": 7,
+    "motionen": 0.0,
+    "postulate": 3.0,
+    "interpellationen": 4.0
+  },
+  {
+    "index": 110,
+    "person_code": 3153,
+    "author": "Friedli Esther",
+    "total": 10,
+    "motionen": 7.0,
+    "postulate": 2.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 111,
+    "person_code": 3155,
+    "author": "Gafner Andreas",
+    "total": 9,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 7.0
+  },
+  {
+    "index": 112,
+    "person_code": 3157,
+    "author": "Giacometti Anna",
+    "total": 4,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 3.0
+  },
+  {
+    "index": 113,
+    "person_code": 3158,
+    "author": "Giezendanner Benjamin",
+    "total": 3,
+    "motionen": 2.0,
+    "postulate": 1.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 114,
+    "person_code": 3159,
+    "author": "Gredig Corina",
+    "total": 2,
+    "motionen": 0.0,
+    "postulate": 1.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 115,
+    "person_code": 3160,
+    "author": "Gysin Greta",
+    "total": 13,
+    "motionen": 7.0,
+    "postulate": 0.0,
+    "interpellationen": 6.0
+  },
+  {
+    "index": 116,
+    "person_code": 3162,
+    "author": "Hurni Baptiste",
+    "total": 5,
+    "motionen": 2.0,
+    "postulate": 1.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 117,
+    "person_code": 3163,
+    "author": "Kamerzin Sidney",
+    "total": 4,
+    "motionen": 3.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 118,
+    "person_code": 3164,
+    "author": "Klopfenstein Broggini Delphine",
+    "total": 20,
+    "motionen": 2.0,
+    "postulate": 3.0,
+    "interpellationen": 15.0
+  },
+  {
+    "index": 119,
+    "person_code": 3167,
+    "author": "Maitre Vincent",
+    "total": 7,
+    "motionen": 3.0,
+    "postulate": 2.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 120,
+    "person_code": 3170,
+    "author": "Michaud Gigon Sophie",
+    "total": 10,
+    "motionen": 4.0,
+    "postulate": 1.0,
+    "interpellationen": 5.0
+  },
+  {
+    "index": 121,
+    "person_code": 3172,
+    "author": "Porchet Léonore",
+    "total": 13,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 12.0
+  },
+  {
+    "index": 122,
+    "person_code": 3173,
+    "author": "Pult Jon",
+    "total": 6,
+    "motionen": 1.0,
+    "postulate": 1.0,
+    "interpellationen": 4.0
+  },
+  {
+    "index": 123,
+    "person_code": 3174,
+    "author": "Rechsteiner Thomas",
+    "total": 13,
+    "motionen": 3.0,
+    "postulate": 5.0,
+    "interpellationen": 5.0
+  },
+  {
+    "index": 124,
+    "person_code": 3175,
+    "author": "Roth Franziska",
+    "total": 5,
+    "motionen": 4.0,
+    "postulate": 1.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 125,
+    "person_code": 3176,
+    "author": "Roth Pasquier Marie-France",
+    "total": 1,
+    "motionen": 0.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 126,
+    "person_code": 3177,
+    "author": "Rüegger Monika",
+    "total": 2,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 127,
+    "person_code": 3178,
+    "author": "Ryser Franziska",
+    "total": 17,
+    "motionen": 4.0,
+    "postulate": 1.0,
+    "interpellationen": 12.0
+  },
+  {
+    "index": 128,
+    "person_code": 3179,
+    "author": "Schaffner Barbara",
+    "total": 9,
+    "motionen": 4.0,
+    "postulate": 2.0,
+    "interpellationen": 3.0
+  },
+  {
+    "index": 129,
+    "person_code": 3180,
+    "author": "Schlatter Marionna",
+    "total": 25,
+    "motionen": 8.0,
+    "postulate": 1.0,
+    "interpellationen": 16.0
+  },
+  {
+    "index": 130,
+    "person_code": 3181,
+    "author": "Schneider Meret",
+    "total": 16,
+    "motionen": 9.0,
+    "postulate": 4.0,
+    "interpellationen": 3.0
+  },
+  {
+    "index": 131,
+    "person_code": 3182,
+    "author": "Silberschmidt Andri",
+    "total": 10,
+    "motionen": 5.0,
+    "postulate": 2.0,
+    "interpellationen": 3.0
+  },
+  {
+    "index": 132,
+    "person_code": 3183,
+    "author": "Gapany Johanna",
+    "total": 5,
+    "motionen": 3.0,
+    "postulate": 1.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 133,
+    "person_code": 3184,
+    "author": "Stadler Simon",
+    "total": 2,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 134,
+    "person_code": 3185,
+    "author": "Strupler Manuel",
+    "total": 3,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 135,
+    "person_code": 3187,
+    "author": "Suter Gabriela",
+    "total": 13,
+    "motionen": 2.0,
+    "postulate": 1.0,
+    "interpellationen": 10.0
+  },
+  {
+    "index": 136,
+    "person_code": 3188,
+    "author": "Vincenz-Stauffacher Susanne",
+    "total": 3,
+    "motionen": 1.0,
+    "postulate": 1.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 137,
+    "person_code": 3189,
+    "author": "Walder Nicolas",
+    "total": 10,
+    "motionen": 5.0,
+    "postulate": 1.0,
+    "interpellationen": 4.0
+  },
+  {
+    "index": 138,
+    "person_code": 3190,
+    "author": "Weichelt Manuela",
+    "total": 20,
+    "motionen": 5.0,
+    "postulate": 2.0,
+    "interpellationen": 13.0
+  },
+  {
+    "index": 139,
+    "person_code": 3191,
+    "author": "Wettstein Felix",
+    "total": 12,
+    "motionen": 4.0,
+    "postulate": 1.0,
+    "interpellationen": 7.0
+  },
+  {
+    "index": 140,
+    "person_code": 3192,
+    "author": "Widmer Céline",
+    "total": 2,
+    "motionen": 0.0,
+    "postulate": 0.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 141,
+    "person_code": 3194,
+    "author": "Herzog Eva",
+    "total": 8,
+    "motionen": 4.0,
+    "postulate": 0.0,
+    "interpellationen": 4.0
+  },
+  {
+    "index": 142,
+    "person_code": 3195,
+    "author": "Juillard Charles",
+    "total": 7,
+    "motionen": 3.0,
+    "postulate": 3.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 143,
+    "person_code": 3196,
+    "author": "Stark Jakob",
+    "total": 6,
+    "motionen": 4.0,
+    "postulate": 0.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 144,
+    "person_code": 3198,
+    "author": "Z'graggen Heidi",
+    "total": 9,
+    "motionen": 4.0,
+    "postulate": 1.0,
+    "interpellationen": 4.0
+  },
+  {
+    "index": 145,
+    "person_code": 3199,
+    "author": "Zopfi Mathias",
+    "total": 1,
+    "motionen": 0.0,
+    "postulate": 1.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 146,
+    "person_code": 3200,
+    "author": "Maret Marianne",
+    "total": 7,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 5.0
+  },
+  {
+    "index": 147,
+    "person_code": 3202,
+    "author": "Wismer-Felder Priska",
+    "total": 7,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 4.0
+  },
+  {
+    "index": 148,
+    "person_code": 3205,
+    "author": "Michel Matthias",
+    "total": 7,
+    "motionen": 3.0,
+    "postulate": 1.0,
+    "interpellationen": 3.0
+  },
+  {
+    "index": 149,
+    "person_code": 3206,
+    "author": "Guggisberg Lars",
+    "total": 1,
+    "motionen": 0.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 150,
+    "person_code": 3207,
+    "author": "Marchesi Piero",
+    "total": 22,
+    "motionen": 9.0,
+    "postulate": 0.0,
+    "interpellationen": 13.0
+  },
+  {
+    "index": 151,
+    "person_code": 3208,
+    "author": "Storni Bruno",
+    "total": 17,
+    "motionen": 4.0,
+    "postulate": 2.0,
+    "interpellationen": 11.0
+  },
+  {
+    "index": 152,
+    "person_code": 3210,
+    "author": "Heimgartner Stefanie",
+    "total": 2,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 153,
+    "person_code": 3211,
+    "author": "Brenzikofer Florence",
+    "total": 14,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 12.0
+  },
+  {
+    "index": 154,
+    "person_code": 3213,
+    "author": "Huber Alois",
+    "total": 1,
+    "motionen": 0.0,
+    "postulate": 1.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 155,
+    "person_code": 3214,
+    "author": "Wyss Sarah",
+    "total": 8,
+    "motionen": 0.0,
+    "postulate": 0.0,
+    "interpellationen": 8.0
+  },
+  {
+    "index": 156,
+    "person_code": 3216,
+    "author": "Graber Michael",
+    "total": 4,
+    "motionen": 0.0,
+    "postulate": 0.0,
+    "interpellationen": 4.0
+  },
+  {
+    "index": 157,
+    "person_code": 3217,
+    "author": "Amoos Emmanuel",
+    "total": 14,
+    "motionen": 5.0,
+    "postulate": 2.0,
+    "interpellationen": 7.0
+  },
+  {
+    "index": 158,
+    "person_code": 3218,
+    "author": "Weber Céline",
+    "total": 15,
+    "motionen": 4.0,
+    "postulate": 3.0,
+    "interpellationen": 8.0
+  },
+  {
+    "index": 159,
+    "person_code": 3219,
+    "author": "von Falkenstein Patricia",
+    "total": 9,
+    "motionen": 3.0,
+    "postulate": 1.0,
+    "interpellationen": 5.0
+  },
+  {
+    "index": 160,
+    "person_code": 3220,
+    "author": "Chassot Isabelle",
+    "total": 1,
+    "motionen": 0.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 161,
+    "person_code": 3221,
+    "author": "Fischer Benjamin",
+    "total": 8,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 7.0
+  },
+  {
+    "index": 162,
+    "person_code": 3222,
+    "author": "Mahaim Raphaël",
+    "total": 18,
+    "motionen": 1.0,
+    "postulate": 2.0,
+    "interpellationen": 15.0
+  },
+  {
+    "index": 163,
+    "person_code": 3224,
+    "author": "Ruch Daniel",
+    "total": 6,
+    "motionen": 4.0,
+    "postulate": 1.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 164,
+    "person_code": 3226,
+    "author": "Jost Marc",
+    "total": 13,
+    "motionen": 4.0,
+    "postulate": 3.0,
+    "interpellationen": 6.0
+  },
+  {
+    "index": 165,
+    "person_code": 3227,
+    "author": "Crevoisier Crelier Mathilde",
+    "total": 3,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 166,
+    "person_code": 3228,
+    "author": "Meier Andreas",
+    "total": 16,
+    "motionen": 8.0,
+    "postulate": 4.0,
+    "interpellationen": 4.0
+  },
+  {
+    "index": 167,
+    "person_code": 3229,
+    "author": "Bläsi Thomas",
+    "total": 3,
+    "motionen": 1.0,
+    "postulate": 2.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 168,
+    "person_code": 3230,
+    "author": "Götte Michael",
+    "total": 6,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 5.0
+  },
+  {
+    "index": 169,
+    "person_code": 10801,
+    "author": "Riner Christoph",
+    "total": 10,
+    "motionen": 4.0,
+    "postulate": 1.0,
+    "interpellationen": 5.0
+  },
+  {
+    "index": 170,
+    "person_code": 10802,
+    "author": "Mühlemann Benjamin",
+    "total": 5,
+    "motionen": 4.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 171,
+    "person_code": 10803,
+    "author": "Aellen Cyril",
+    "total": 3,
+    "motionen": 1.0,
+    "postulate": 1.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 172,
+    "person_code": 10804,
+    "author": "Balmer Bettina",
+    "total": 7,
+    "motionen": 2.0,
+    "postulate": 2.0,
+    "interpellationen": 3.0
+  },
+  {
+    "index": 173,
+    "person_code": 10805,
+    "author": "Broulis Pascal",
+    "total": 16,
+    "motionen": 6.0,
+    "postulate": 2.0,
+    "interpellationen": 8.0
+  },
+  {
+    "index": 174,
+    "person_code": 10806,
+    "author": "Vietze Kris",
+    "total": 2,
+    "motionen": 0.0,
+    "postulate": 0.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 175,
+    "person_code": 10807,
+    "author": "Gianini Simone",
+    "total": 8,
+    "motionen": 2.0,
+    "postulate": 1.0,
+    "interpellationen": 5.0
+  },
+  {
+    "index": 176,
+    "person_code": 10808,
+    "author": "Theiler Heinz",
+    "total": 2,
+    "motionen": 0.0,
+    "postulate": 0.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 177,
+    "person_code": 10809,
+    "author": "Gobet Nadine",
+    "total": 6,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 4.0
+  },
+  {
+    "index": 178,
+    "person_code": 10811,
+    "author": "Nause Reto",
+    "total": 6,
+    "motionen": 5.0,
+    "postulate": 1.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 179,
+    "person_code": 10812,
+    "author": "Alijaj Islam",
+    "total": 4,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 180,
+    "person_code": 10813,
+    "author": "Brizzi Simona",
+    "total": 2,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 181,
+    "person_code": 10814,
+    "author": "Kaufmann Pius",
+    "total": 3,
+    "motionen": 2.0,
+    "postulate": 1.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 182,
+    "person_code": 10815,
+    "author": "Durrer-Knobel Regina",
+    "total": 2,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 183,
+    "person_code": 10816,
+    "author": "Blunschy Dominik",
+    "total": 6,
+    "motionen": 0.0,
+    "postulate": 1.0,
+    "interpellationen": 5.0
+  },
+  {
+    "index": 184,
+    "person_code": 10817,
+    "author": "Chappuis Isabelle",
+    "total": 8,
+    "motionen": 5.0,
+    "postulate": 0.0,
+    "interpellationen": 3.0
+  },
+  {
+    "index": 185,
+    "person_code": 10818,
+    "author": "Barandun Nicole",
+    "total": 3,
+    "motionen": 0.0,
+    "postulate": 2.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 186,
+    "person_code": 10819,
+    "author": "Bürgin Yvonne",
+    "total": 3,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 187,
+    "person_code": 10820,
+    "author": "Jaccoud Jessica",
+    "total": 9,
+    "motionen": 2.0,
+    "postulate": 1.0,
+    "interpellationen": 6.0
+  },
+  {
+    "index": 188,
+    "person_code": 10821,
+    "author": "Roth David",
+    "total": 12,
+    "motionen": 3.0,
+    "postulate": 0.0,
+    "interpellationen": 9.0
+  },
+  {
+    "index": 189,
+    "person_code": 10822,
+    "author": "Zybach Ursula",
+    "total": 13,
+    "motionen": 3.0,
+    "postulate": 2.0,
+    "interpellationen": 8.0
+  },
+  {
+    "index": 190,
+    "person_code": 10823,
+    "author": "Revaz Estelle",
+    "total": 7,
+    "motionen": 1.0,
+    "postulate": 3.0,
+    "interpellationen": 3.0
+  },
+  {
+    "index": 191,
+    "person_code": 10824,
+    "author": "Rosenwasser Anna",
+    "total": 5,
+    "motionen": 1.0,
+    "postulate": 2.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 192,
+    "person_code": 10825,
+    "author": "Tuosto Brenda",
+    "total": 11,
+    "motionen": 0.0,
+    "postulate": 3.0,
+    "interpellationen": 8.0
+  },
+  {
+    "index": 193,
+    "person_code": 10826,
+    "author": "Schläfli Nina",
+    "total": 7,
+    "motionen": 0.0,
+    "postulate": 2.0,
+    "interpellationen": 5.0
+  },
+  {
+    "index": 194,
+    "person_code": 10827,
+    "author": "Tschopp Jean",
+    "total": 13,
+    "motionen": 2.0,
+    "postulate": 2.0,
+    "interpellationen": 9.0
+  },
+  {
+    "index": 195,
+    "person_code": 10828,
+    "author": "Candan Hasan",
+    "total": 15,
+    "motionen": 1.0,
+    "postulate": 3.0,
+    "interpellationen": 11.0
+  },
+  {
+    "index": 196,
+    "person_code": 10829,
+    "author": "Docourt Martine",
+    "total": 7,
+    "motionen": 4.0,
+    "postulate": 1.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 197,
+    "person_code": 10830,
+    "author": "Riem Katja",
+    "total": 2,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 198,
+    "person_code": 10831,
+    "author": "Hübscher Martin",
+    "total": 3,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 199,
+    "person_code": 10832,
+    "author": "Knutti Thomas",
+    "total": 16,
+    "motionen": 8.0,
+    "postulate": 1.0,
+    "interpellationen": 7.0
+  },
+  {
+    "index": 200,
+    "person_code": 10833,
+    "author": "Fehr Düsel Nina",
+    "total": 8,
+    "motionen": 4.0,
+    "postulate": 2.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 201,
+    "person_code": 10834,
+    "author": "Wandfluh Ernst",
+    "total": 4,
+    "motionen": 3.0,
+    "postulate": 1.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 202,
+    "person_code": 10835,
+    "author": "Freymond Sylvain",
+    "total": 4,
+    "motionen": 3.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 203,
+    "person_code": 10836,
+    "author": "Kolly Nicolas",
+    "total": 19,
+    "motionen": 8.0,
+    "postulate": 0.0,
+    "interpellationen": 11.0
+  },
+  {
+    "index": 204,
+    "person_code": 10838,
+    "author": "Vontobel Erich",
+    "total": 15,
+    "motionen": 5.0,
+    "postulate": 0.0,
+    "interpellationen": 10.0
+  },
+  {
+    "index": 205,
+    "person_code": 10839,
+    "author": "Poggia Mauro",
+    "total": 15,
+    "motionen": 9.0,
+    "postulate": 1.0,
+    "interpellationen": 5.0
+  },
+  {
+    "index": 206,
+    "person_code": 10840,
+    "author": "Pahud Yvan",
+    "total": 16,
+    "motionen": 4.0,
+    "postulate": 0.0,
+    "interpellationen": 12.0
+  },
+  {
+    "index": 207,
+    "person_code": 10841,
+    "author": "Schnyder Markus",
+    "total": 3,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 208,
+    "person_code": 10842,
+    "author": "Pamini Paolo",
+    "total": 3,
+    "motionen": 1.0,
+    "postulate": 1.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 209,
+    "person_code": 10843,
+    "author": "Schmid Pascal",
+    "total": 11,
+    "motionen": 8.0,
+    "postulate": 2.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 210,
+    "person_code": 10844,
+    "author": "Hug Roman",
+    "total": 2,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 211,
+    "person_code": 10845,
+    "author": "Bürgi Roman",
+    "total": 3,
+    "motionen": 0.0,
+    "postulate": 0.0,
+    "interpellationen": 3.0
+  },
+  {
+    "index": 212,
+    "person_code": 10846,
+    "author": "Wyssmann Rémy",
+    "total": 9,
+    "motionen": 6.0,
+    "postulate": 0.0,
+    "interpellationen": 3.0
+  },
+  {
+    "index": 213,
+    "person_code": 10848,
+    "author": "Gartmann Walter",
+    "total": 9,
+    "motionen": 8.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 214,
+    "person_code": 10849,
+    "author": "Thalmann-Bieri Vroni",
+    "total": 9,
+    "motionen": 0.0,
+    "postulate": 0.0,
+    "interpellationen": 9.0
+  },
+  {
+    "index": 215,
+    "person_code": 10850,
+    "author": "Calame Didier",
+    "total": 8,
+    "motionen": 6.0,
+    "postulate": 1.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 216,
+    "person_code": 10851,
+    "author": "Zryd Andrea",
+    "total": 5,
+    "motionen": 0.0,
+    "postulate": 1.0,
+    "interpellationen": 4.0
+  },
+  {
+    "index": 217,
+    "person_code": 10852,
+    "author": "Rüegsegger Hans Jörg",
+    "total": 1,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 0.0
+  },
+  {
+    "index": 218,
+    "person_code": 11404,
+    "author": "Sormanni Daniel",
+    "total": 12,
+    "motionen": 10.0,
+    "postulate": 1.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 219,
+    "person_code": 11504,
+    "author": "Stocker Simon",
+    "total": 2,
+    "motionen": 0.0,
+    "postulate": 1.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 220,
+    "person_code": 11505,
+    "author": "Fonio Giorgio",
+    "total": 7,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 5.0
+  },
+  {
+    "index": 221,
+    "person_code": 11506,
+    "author": "Rumy Farah",
+    "total": 16,
+    "motionen": 4.0,
+    "postulate": 3.0,
+    "interpellationen": 9.0
+  },
+  {
+    "index": 222,
+    "person_code": 11507,
+    "author": "Hässig Patrick",
+    "total": 12,
+    "motionen": 1.0,
+    "postulate": 6.0,
+    "interpellationen": 5.0
+  },
+  {
+    "index": 223,
+    "person_code": 11508,
+    "author": "Bally Maya",
+    "total": 4,
+    "motionen": 0.0,
+    "postulate": 2.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 224,
+    "person_code": 14105,
+    "author": "De Ventura Linda",
+    "total": 7,
+    "motionen": 0.0,
+    "postulate": 0.0,
+    "interpellationen": 7.0
+  },
+  {
+    "index": 225,
+    "person_code": 14803,
+    "author": "Glur Christian",
+    "total": 3,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 226,
+    "person_code": 14809,
+    "author": "Schmezer Ueli",
+    "total": 8,
+    "motionen": 0.0,
+    "postulate": 1.0,
+    "interpellationen": 7.0
+  },
+  {
+    "index": 227,
+    "person_code": 14810,
+    "author": "Stämpfli Fabienne",
+    "total": 4,
+    "motionen": 2.0,
+    "postulate": 0.0,
+    "interpellationen": 2.0
+  },
+  {
+    "index": 228,
+    "person_code": 15004,
+    "author": "Gaillard Benoît",
+    "total": 9,
+    "motionen": 1.0,
+    "postulate": 1.0,
+    "interpellationen": 7.0
+  },
+  {
+    "index": 229,
+    "person_code": 15304,
+    "author": "Chollet Clarence",
+    "total": 8,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 7.0
+  },
+  {
+    "index": 230,
+    "person_code": 15601,
+    "author": "Brüngger Severin",
+    "total": 1,
+    "motionen": 0.0,
+    "postulate": 0.0,
+    "interpellationen": 1.0
+  },
+  {
+    "index": 231,
+    "person_code": 16109,
+    "author": "Berli Rudi",
+    "total": 1,
+    "motionen": 1.0,
+    "postulate": 0.0,
+    "interpellationen": 0.0
+  }
+]

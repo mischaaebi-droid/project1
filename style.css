@@ -1,3 +1,7 @@
+/* =========================================================
+   1. Base
+   ========================================================= */
+
 * {
     box-sizing: border-box;
 }
@@ -13,6 +17,11 @@ body {
     margin: 0 auto;
     padding: 0 32px;
 }
+
+
+/* =========================================================
+   2. Text and title
+   ========================================================= */
 
 .title {
     max-width: 900px;
@@ -56,418 +65,14 @@ body {
     color: #555;
 }
 
-.sort-controls {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin: 0 auto 18px;
-}
 
-.sort-button {
-    border: 1px solid #111;
-    background: transparent;
-    color: #111;
-    padding: 9px 14px;
-    border-radius: 999px;
-    font-size: 0.85rem;
-    cursor: pointer;
-}
-
-.sort-button.active {
-    background: #111;
-    color: #f3f3f1;
-}
-
-.swiper {
-    width: 100%;
-    padding: 0 0 55px;
-    overflow: hidden;
-}
-
-.swiper-wrapper {
-    align-items: center;
-}
-
-.swiper-slide {
-    min-height: 500px;
-    padding: 22px 20px 30px;
-    opacity: 1;
-    transform: scale(1);
-    filter: blur(0);
-}
-
-.swiper-slide-active {
-    opacity: 1;
-    transform: scale(1);
-    filter: blur(0);
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-    color: #111;
-    top: 35%;
-}
-
-.swiper-button-prev {
-    left: 14%;
-}
-
-.swiper-button-next {
-    right: 14%;
-}
-
-.portrait-card {
-    max-width: 1120px;
-    margin: 0 auto;
-}
-
-.newspaper-card {
-    background: white;
-    border: 1px solid #7aa36f;
-    border-radius: 1px;
-    padding: 22px 26px 20px;
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
-}
-
-.portrait-header {
-    display: grid;
-    grid-template-columns: 130px 1fr 320px;
-    gap: 34px;
-    align-items: center;
-    padding-bottom: 10px;
-}
-
-.portrait-left img {
-    display: block;
-    width: 125px;
-    height: 125px;
-    object-fit: cover;
-    object-position: center top;
-    border-radius: 50%;
-    filter: grayscale(100%);
-}
-
-.portrait-name-block {
-    text-align: left;
-}
-
-.rank-label {
-    display: table;
-    margin: 0 auto 14px;
-    padding: 5px 14px 4px;
-    font-size: 1rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    color: #fbfaf6;
-    background: #111;
-    border: 1px solid #111;
-    border-radius: 999px;
-    text-transform: uppercase;
-}
-
-.portrait-name-block h2 {
-    margin: 0 0 7px;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1rem, 1.2vw, 1.6rem);
-    line-height: 0.95;
-    letter-spacing: -0.05em;
-}
-
-.portrait-name-block .text {
-    max-width: none;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-    font-size: 1rem;
-    color: #555;
-}
-
-.success-summary {
-    display: grid;
-    grid-template-columns: auto auto;
-    align-items: center;
-    justify-content: center;
-    column-gap: 12px;
-    border-left: 0;
-    text-align: left;
-}
-
-.success-summary p {
-    margin: 0;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #777;
-}
-
-.success-summary strong {
-    margin: 0;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 1;
-}
-
-.square-chart {
-    padding-top: 5px;
-}
-
-.proposal-section {
-    padding: 10px 0 20px;
-}
-
-.proposal-section+.proposal-section {
-    padding-top: 10px;
-}
-
-.proposal-section h3 {
-    margin: 0 0 10px;
-    letter-spacing: 0.03em;
-    font-size: 0.95rem;
-    line-height: 1.2;
-}
-
-.demands-section h3 {
-    color: #c85a43;
-}
-
-.questions-section h3 {
-    color: #3f6fa9;
-}
-
-.demand-legend {
-    padding-top: 5px;
-    margin-bottom: 16px;
-}
-
-.proposal-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-    max-width: 100%;
-}
-
-.proposal-square {
-    width: 14px;
-    height: 14px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1;
-    flex: 0 0 auto;
-    opacity: 1;
-    transform: none;
-    border-radius: 2px;
-}
-
-@keyframes square-appear {
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-.interpellation-square {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #3f6fa9;
-    opacity: 0.45;
-    border: none;
-}
-
-.motion-square {
-    background: transparent;
-    border: 2px solid #c85a43;
-}
-
-.motion-square.successful {
-    background: #c85a43;
-}
-
-.legend {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 34px;
-    align-items: center;
-    padding-top: 20px;
-    font-size: 0.87rem;
-    color: #444;
-}
-
-.legend-square {
-    width: 11px;
-    height: 11px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 8px;
-    vertical-align: middle;
-    border-radius: 2px;
-}
-
-.legend-square.no-success {
-    background: transparent;
-    border: 2px solid #c85a43;
-}
-
-.legend-square.success {
-    background: #c85a43;
-    border: 2px solid #c85a43;
-}
-
-.successful-demo {
-    background: #fbfaf6;
-    border: 2px solid #2f6f2f;
-    color: #2f6f2f;
-    font-weight: 700;
-}
-
-@media (max-width: 900px) {
-    .portrait-card {
-        max-width: 620px;
-    }
-    .portrait-header {
-        grid-template-columns: 1fr;
-        gap: 18px;
-        text-align: center;
-    }
-    .portrait-left img {
-        margin: 0 auto;
-    }
-    .portrait-name-block {
-        text-align: center;
-    }
-    .portrait-name-block .text {
-        text-align: center;
-    }
-    .success-summary {
-        border-left: 0;
-        padding-left: 0;
-        padding-top: 0px;
-        justify-content: center;
-        text-align: left;
-    }
-}
-
-@media (max-width: 700px) {
-    .title {
-        margin: 22px auto 0;
-    }
-    .swiper-slide {
-        min-height: 520px;
-        padding: 1px 12px 30px;
-    }
-    .newspaper-card {
-        padding: 26px 22px;
-    }
-    .portrait-name-block h2 {
-        font-size: 2.3rem;
-    }
-    .success-summary strong {
-        font-size: 2rem;
-    }
-    .proposal-section h3 {
-        font-size: 1.05rem;
-    }
-    .proposal-grid {
-        gap: 6px;
-    }
-    .proposal-square {
-        width: 16px;
-        height: 16px;
-        font-size: 12px;
-    }
-    .legend {
-        gap: 14px;
-        font-size: 0.82rem;
-    }
-}
-
-@media (min-width: 1000px) {
-    .swiper-wrapper {
-        align-items: stretch !important;
-    }
-    .swiper-slide {
-        height: auto !important;
-        display: flex !important;
-        align-items: stretch !important;
-    }
-    .swiper-slide .newspaper-card {
-        width: 100%;
-        min-height: 300px;
-        display: flex;
-        flex-direction: column;
-    }
-    .portrait-header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 10px;
-        padding-bottom: 6px;
-    }
-    .portrait-left img {
-        width: 80px;
-        height: 80px;
-    }
-    .portrait-name-block {
-        text-align: center;
-    }
-    .portrait-name-block h2 {
-        font-size: clamp(1.4rem, 1.7vw, 2.1rem);
-        text-align: center;
-    }
-    .bio_text {
-        text-align: center;
-        margin: 4px auto 0px;
-        padding: 0;
-    }
-    .success-summary {
-        border-left: 0;
-        width: 100%;
-        padding-left: 0;
-        text-align: center;
-    }
-    .success-summary strong {
-        font-size: 2.2rem;
-    }
-    .success-summary p {
-        margin-top: 4px;
-    }
-    .square-chart {
-        flex: 0;
-        padding-top: 6px;
-    }
-    .proposal-section {
-        padding: 6px 0 12px;
-    }
-    .proposal-section+.proposal-section {
-        padding-top: 4px;
-    }
-    .legend {
-        padding-top: 8px;
-    }
-}
-
-@media (max-width: 999px) {
-    .swiper-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        transform: none !important;
-    }
-    .swiper-slide {
-        width: 100% !important;
-        margin: 0 !important;
-    }
-}
+/* =========================================================
+   3. Search
+   ========================================================= */
 
 .search-section {
     max-width: 520px;
-    margin: 50px auto 0px;
+    margin: 50px auto 0;
     text-align: center;
 }
 
@@ -498,10 +103,270 @@ body {
     padding: 0;
 }
 
+.search-match .newspaper-card {
+    background: #f4f8ef;
+    border: 1px solid #7aa36f;
+}
+
 .no-result {
     color: #777;
     font-size: 0.95rem;
 }
+
+
+/* =========================================================
+   4. Cards and portrait header
+   ========================================================= */
+
+.swiper {
+    width: 100%;
+    padding: 0 0 55px;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    align-items: center;
+}
+
+.swiper-slide {
+    min-height: 500px;
+    padding: 22px 20px 30px;
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+}
+
+.portrait-card {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.newspaper-card {
+    background: white;
+    border: 1px solid #7aa36f;
+    border-radius: 1px;
+    padding: 22px 26px 20px;
+}
+
+.rank-label {
+    display: table;
+    margin: 0 auto 14px;
+    padding: 5px 14px 4px;
+    border: 1px solid #111;
+    border-radius: 999px;
+    background: #111;
+    color: #fbfaf6;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.portrait-header {
+    display: grid;
+    grid-template-columns: 130px 1fr 320px;
+    gap: 34px;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.portrait-main {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.portrait-left img {
+    display: block;
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    filter: grayscale(100%);
+}
+
+.portrait-name-block {
+    flex: 1;
+    text-align: left;
+}
+
+.portrait-name-block h2 {
+    margin: 0 0 7px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1rem, 1.2vw, 1.6rem);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+}
+
+
+/* =========================================================
+   5. Success summary
+   ========================================================= */
+
+.success-summary {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
+    column-gap: 12px;
+    border-left: 0;
+    text-align: left;
+}
+
+.success-summary p {
+    margin: 0;
+    color: #777;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.success-summary strong {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   6. Proposal charts
+   ========================================================= */
+
+.square-chart {
+    padding-top: 5px;
+}
+
+.proposal-section {
+    padding: 10px 0 20px;
+}
+
+.proposal-section+.proposal-section {
+    padding-top: 10px;
+}
+
+.proposal-section h3 {
+    margin: 0 0 10px;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+}
+
+.demands-section h3 {
+    color: #c85a43;
+}
+
+.questions-section h3 {
+    color: #3f6fa9;
+}
+
+.proposal-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    max-width: 100%;
+}
+
+.proposal-square {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 1;
+    transform: none;
+}
+
+.interpellation-square {
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+    background: #3f6fa9;
+    opacity: 0.45;
+}
+
+.motion-square {
+    border: 2px solid #c85a43;
+    background: transparent;
+}
+
+.motion-square.successful {
+    background: #c85a43;
+}
+
+
+/* =========================================================
+   7. Legend
+   ========================================================= */
+
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 34px;
+    align-items: center;
+    padding-top: 20px;
+    color: #444;
+    font-size: 0.87rem;
+}
+
+.demand-legend {
+    padding-top: 5px;
+    margin-bottom: 16px;
+}
+
+.legend-square {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 11px;
+    height: 11px;
+    margin-right: 8px;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+
+.legend-square.no-success {
+    border: 2px solid #c85a43;
+    background: transparent;
+}
+
+.legend-square.success {
+    border: 2px solid #c85a43;
+    background: #c85a43;
+}
+
+
+/* =========================================================
+   8. Sort buttons
+   Referenced in script.js, even if currently not present in index.html.
+   ========================================================= */
+
+.sort-button {
+    padding: 9px 14px;
+    border: 1px solid #111;
+    border-radius: 999px;
+    background: transparent;
+    color: #111;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.sort-button.active {
+    background: #111;
+    color: #f3f3f1;
+}
+
+
+/* =========================================================
+   9. Desktop layout
+   ========================================================= */
 
 @media (min-width: 1000px) {
     .swiper-wrapper {
@@ -510,19 +375,116 @@ body {
         gap: 24px;
         align-items: start;
     }
+    .swiper-slide {
+        display: flex !important;
+        align-items: stretch !important;
+        height: auto !important;
+    }
+    .swiper-slide .newspaper-card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: 300px;
+    }
+    .portrait-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 6px;
+        text-align: center;
+    }
+    .portrait-left img {
+        width: 80px;
+        height: 80px;
+    }
+    .portrait-name-block h2 {
+        font-size: clamp(1rem, 1.25vw, 2.1rem);
+        text-align: center;
+        margin-top: 10px;
+    }
+    .bio_text {
+        margin: 4px auto 0;
+        padding: 0;
+        text-align: center;
+    }
+    .success-summary {
+        width: 100%;
+        padding-left: 0;
+        border-left: 0;
+        text-align: center;
+    }
+    .success-summary p {
+        margin-top: 4px;
+    }
+    .success-summary strong {
+        font-size: 2.2rem;
+    }
+    .square-chart {
+        flex: 0;
+        padding-top: 6px;
+    }
+    .proposal-section {
+        padding: 6px 0 12px;
+    }
+    .proposal-section+.proposal-section {
+        padding-top: 4px;
+    }
+    .legend {
+        padding-top: 8px;
+    }
 }
 
-.search-match .newspaper-card {
-    background: #f4f8ef;
-    border: 1px solid #7aa36f;
+
+/* =========================================================
+   10. Tablet and narrow desktop layout
+   ========================================================= */
+
+@media (max-width: 999px) {
+    .swiper-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        transform: none !important;
+    }
+    .swiper-slide {
+        width: 100% !important;
+        margin: 0 !important;
+    }
 }
+
+@media (max-width: 900px) {
+    .portrait-card {
+        max-width: 620px;
+    }
+    .portrait-header {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        text-align: center;
+    }
+    .portrait-left img {
+        margin: 0 auto;
+    }
+    .success-summary {
+        justify-content: center;
+        padding-top: 0;
+        padding-left: 0;
+        border-left: 0;
+        text-align: left;
+    }
+}
+
+
+/* =========================================================
+   11. Mobile layout
+   ========================================================= */
 
 @media (max-width: 700px) {
     .page {
         padding: 0 12px;
     }
     .title {
-        margin-top: 16px;
+        margin: 16px auto 0;
         padding: 0 8px;
     }
     .title h1 {
@@ -561,6 +523,7 @@ body {
         height: 78px;
     }
     .portrait-name-block h2 {
+        margin-top: 15px;
         margin-bottom: 4px;
         font-size: 1.65rem;
     }
@@ -599,8 +562,8 @@ body {
         height: 13px;
     }
     .legend {
-        padding-top: 8px;
         gap: 12px;
+        padding-top: 8px;
         font-size: 0.72rem;
     }
     .legend-square {
@@ -610,13 +573,63 @@ body {
     }
 }
 
-.portrait-main {
-    display: flex;
-    align-items: center;
-    gap: 14px;
+
+/* =========================================================
+   Placeholder card
+   ========================================================= */
+
+.placeholder-card {
+    background: #f6f7f7;
+    border-color: #7aa36f;
 }
 
-.portrait-name-block {
-    text-align: left;
-    flex: 1;
+.placeholder-rank {
+    background: #acadab;
+    border-color: #7aa36f;
+    color: white;
+}
+
+.placeholder-card h2,
+.placeholder-card .bio_text,
+.placeholder-card .success-summary,
+.placeholder-card .proposal-section h3,
+.placeholder-card .legend {
+    color: #b2b2b2;
+}
+
+.placeholder-card .success-summary strong {
+    color: #999;
+}
+
+.placeholder-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.head-circle {
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    border-radius: 50%;
+    background: #d7d7d7;
+}
+
+.shoulder-shape {
+    width: 70px;
+    height: 23px;
+    margin-top: -2px;
+    border-radius: 50px 50px 12px 12px;
+    background: #d7d7d7;
+}
+
+.placeholder-square {
+    opacity: 0.18 !important;
+    background: #8e8b8b;
+    border: 2px solid #f7f3f2;
+}
+
+.placeholder-grid {
+    pointer-events: none;
 }

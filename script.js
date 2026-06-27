@@ -208,6 +208,68 @@ Promise.all([
     }
 
 
+    function createPlaceholderSlide() {
+        return `
+        <div class="swiper-slide placeholder-slide">
+            <div class="portrait-card newspaper-card placeholder-card">
+
+                <div class="rank-label placeholder-rank">SEARCH</div>
+
+                <div class="portrait-header">
+                    <div class="portrait-main">
+
+                        <div class="portrait-left placeholder-head">
+                            <div class="head-circle"></div>
+                            <div class="shoulder-shape"></div>
+                        </div>
+
+                        <div class="success-summary placeholder-success">
+                            <p>Total<br>success</p>
+                            <strong>?</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="portrait-name-block">
+                        <h2>"Your" politican</h2>
+                        <p class="bio_text">
+                            Type a name in search field above
+                        </p>
+                    </div>
+                </div>
+
+                <div class="square-chart">
+
+                    <div class="proposal-section demands-section">
+                        <h3>Demands</h3>
+                        <div class="proposal-grid placeholder-grid">
+                            ${createSquares(18, 0, "motion-square placeholder-square", 0)}
+                        </div>
+                    </div>
+
+                    <div class="legend demand-legend">
+                        <span><i class="legend-square no-success"></i> No success</span>
+                        <span><i class="legend-square success"></i> Success</span>
+                    </div>
+
+                    <div class="proposal-section questions-section">
+                        <h3>Inquiries</h3>
+                        <div class="proposal-grid placeholder-grid">
+                            ${createSquares(28, 0, "interpellation-square placeholder-square", 0)}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    `;
+    }
+
+
+
+
+
+
     function createSlide(person, index) {
         const displayName = formatName(person.name);
         const imageLoading = index < 3 ? "eager" : "lazy";
@@ -291,11 +353,13 @@ Promise.all([
 
     function renderSlides(sortKey) {
         const sortedData = getSortedData(sortKey);
-        const visibleData = sortedData.slice(0, 3);
+        const visibleData = sortedData.slice(0, 2);
 
         const slideHtml = visibleData.map(function(person, index) {
             return createSlide(person, index);
         });
+
+        slideHtml.push(createPlaceholderSlide());
 
         wrapper.innerHTML = slideHtml.join("");
     }
