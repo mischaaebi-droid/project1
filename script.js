@@ -226,60 +226,61 @@ Promise.all([
 
              <div class="rank-label">${rankLabel}</div>
 
-                <div class="portrait-header">
-                    <div class="portrait-left">
-                        <img src="${person.image}" alt="${person.name}" loading="${imageLoading}">
-                    </div>
+              
+<div class="portrait-header">
 
-                    <div class="portrait-name-block">
-                        
-                        <h2>${displayName}</h2>
-                        <p class="bio_text">${person.chamber ?? ""}, Party: ${person.party ?? ""}, District: ${person.place ?? ""}</p>
-                        
-                   
+    <div class="portrait-main">
 
-                    </div>
+        <div class="portrait-left">
+            <img src="${person.image}" alt="${person.name}" loading="${imageLoading}">
+        </div>
 
-                    <div class="success-summary">
-                        
-                       
-                            <p>Total <br>success</p>
-                            <strong>${success}</strong>
-                            
-            
-                    </div>
-                    
-                </div>
- 
+
+
+  <div class="success-summary">
+        <p>Total<br>success</p>
+        <strong>${success}</strong>
+    </div>
+
+        
+
+    </div>
+
+  <div class="portrait-name-block">
+            <h2>${displayName}</h2>
+            <p class="bio_text">
+                ${person.chamber ?? ""}, ${person.party ?? ""}, ${person.place ?? ""}
+            </p>
+        </div>
+
+</div>
                 
-
-                <div class="square-chart">
+             <div class="square-chart">
 
                    
-
-                    <div class="proposal-section">
-                        <h3>Demands</h3>
+                    <div class="proposal-section demands-section">
+                        <h3> inquiries</h3>
                         <div class="proposal-grid">
                             ${createSquares(motionsAndPostulates, successfulMotionsAndPostulates, "motion-square", 0.22)}
                         </div>
                     </div>
 
-                     <div class="proposal-section">
+                    <div class="legend demand-legend">
+                        <span><i class="legend-square no-success"></i> No success</span>
+                        <span><i class="legend-square success"></i> Success</span>
+                        
+                    </div>
+
+
+
+
+                     <div class="proposal-section questions-section">
                         <h3>Questions</h3>
                         <div class="proposal-grid">
                             ${createSquares(interpellations, successfulInterpellations, "interpellation-square", 0)}
                         </div>
                     </div>
 
-
-
-
-
-                    <div class="legend">
-                        <span><i class="legend-square no-success"></i> No success</span>
-                        <span><i class="legend-square success"></i> Success</span>
-                        
-                    </div>
 
                 </div>
             </div>

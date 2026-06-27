@@ -10,7 +10,7 @@ body {
 }
 
 .page {
-    max-width: 1400px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 32px;
 }
@@ -29,11 +29,21 @@ body {
     letter-spacing: -0.04em;
 }
 
-.text {
+.lead {
     max-width: 700px;
     margin: 14px auto 24px;
     padding: 0 20px;
     text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #555;
+}
+
+.text {
+    max-width: 700px;
+    margin: 14px auto 24px;
+    padding: 0 20px;
     font-size: 1rem;
     line-height: 1.5;
     color: #555;
@@ -115,7 +125,7 @@ body {
 .newspaper-card {
     background: #fbfaf6;
     border-radius: 1px;
-    padding: 32px 42px 30px;
+    padding: 22px 26px 20px;
     box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
 }
 
@@ -143,9 +153,9 @@ body {
 
 .rank-label {
     display: table;
-    margin: 0 auto 26px;
-    padding: 7px 18px 6px;
-    font-size: 1.25rem;
+    margin: 0 auto 14px;
+    padding: 5px 14px 4px;
+    font-size: 1rem;
     font-weight: 800;
     letter-spacing: 0.08em;
     color: #fbfaf6;
@@ -156,7 +166,7 @@ body {
 }
 
 .portrait-name-block h2 {
-    margin: 0 0 10px;
+    margin: 0 0 7px;
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(1rem, 1.2vw, 1.6rem);
     line-height: 0.95;
@@ -212,18 +222,22 @@ body {
 
 .proposal-section h3 {
     margin: 0 0 10px;
-    text-transform: uppercase;
     letter-spacing: 0.03em;
     font-size: 0.95rem;
     line-height: 1.2;
 }
 
-.proposal-section:first-child h3 {
+.demands-section h3 {
     color: #c85a43;
 }
 
-.proposal-section:nth-child(2) h3 {
+.questions-section h3 {
     color: #3f6fa9;
+}
+
+.demand-legend {
+    padding-top: 5px;
+    margin-bottom: 16px;
 }
 
 .proposal-grid {
@@ -234,8 +248,8 @@ body {
 }
 
 .proposal-square {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -256,12 +270,12 @@ body {
 }
 
 .interpellation-square {
-    background: transparent;
-    border: 2px solid #3f6fa9;
-}
-
-.interpellation-square.successful {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
     background: #3f6fa9;
+    opacity: 0.45;
+    border: none;
 }
 
 .motion-square {
@@ -278,14 +292,14 @@ body {
     flex-wrap: wrap;
     gap: 34px;
     align-items: center;
-    padding-top: 24px;
-    font-size: 0.95rem;
+    padding-top: 20px;
+    font-size: 0.87rem;
     color: #444;
 }
 
 .legend-square {
-    width: 15px;
-    height: 15px;
+    width: 11px;
+    height: 11px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -296,12 +310,12 @@ body {
 
 .legend-square.no-success {
     background: transparent;
-    border: 2px solid black;
+    border: 2px solid #c85a43;
 }
 
 .legend-square.success {
-    background: black;
-    border: 2px solid black;
+    background: #c85a43;
+    border: 2px solid #c85a43;
 }
 
 .successful-demo {
@@ -396,8 +410,8 @@ body {
         padding-bottom: 6px;
     }
     .portrait-left img {
-        width: 92px;
-        height: 92px;
+        width: 80px;
+        height: 80px;
     }
     .portrait-name-block {
         text-align: center;
@@ -408,7 +422,7 @@ body {
     }
     .bio_text {
         text-align: center;
-        margin: 4px auto 10px;
+        margin: 4px auto 0px;
         padding: 0;
     }
     .success-summary {
@@ -428,13 +442,13 @@ body {
         padding-top: 6px;
     }
     .proposal-section {
-        padding: 10px 0 18px;
+        padding: 6px 0 12px;
     }
     .proposal-section+.proposal-section {
-        padding-top: 8px;
+        padding-top: 4px;
     }
     .legend {
-        padding-top: 14px;
+        padding-top: 8px;
     }
 }
 
@@ -471,7 +485,6 @@ body {
     width: 100%;
     padding: 13px 16px;
     border: 1px solid #111;
-    border-radius: 999px;
     background: #fbfaf6;
     font-size: 1rem;
     text-align: center;
@@ -503,4 +516,108 @@ body {
     background: #f4f8ef;
     border: 1px solid #7aa36f;
     box-shadow: 0 18px 45px rgba(47, 111, 47, 0.16);
+}
+
+@media (max-width: 700px) {
+    .page {
+        padding: 0 12px;
+    }
+    .title {
+        margin-top: 16px;
+        padding: 0 8px;
+    }
+    .title h1 {
+        font-size: 1.75rem;
+    }
+    .text {
+        margin: 10px auto 14px;
+        padding: 0 8px;
+        font-size: 0.9rem;
+        line-height: 1.35;
+    }
+    .search-section {
+        margin: 22px auto 8px;
+    }
+    .swiper-wrapper {
+        gap: 14px;
+    }
+    .swiper-slide {
+        min-height: 0;
+        padding: 0;
+    }
+    .newspaper-card {
+        padding: 18px 16px 16px;
+    }
+    .rank-label {
+        margin-bottom: 12px;
+        padding: 5px 12px 4px;
+        font-size: 0.8rem;
+    }
+    .portrait-header {
+        gap: 8px;
+        padding-bottom: 4px;
+    }
+    .portrait-left img {
+        width: 78px;
+        height: 78px;
+    }
+    .portrait-name-block h2 {
+        margin-bottom: 4px;
+        font-size: 1.65rem;
+    }
+    .bio_text {
+        margin: 0;
+        font-size: 0.78rem;
+        line-height: 1.25;
+    }
+    .success-summary {
+        margin-top: 4px;
+    }
+    .success-summary p {
+        font-size: 0.64rem;
+    }
+    .success-summary strong {
+        font-size: 1.75rem;
+    }
+    .square-chart {
+        padding-top: 2px;
+    }
+    .proposal-section {
+        padding: 6px 0 10px;
+    }
+    .proposal-section+.proposal-section {
+        padding-top: 4px;
+    }
+    .proposal-section h3 {
+        margin-bottom: 6px;
+        font-size: 0.85rem;
+    }
+    .proposal-grid {
+        gap: 4px;
+    }
+    .proposal-square {
+        width: 13px;
+        height: 13px;
+    }
+    .legend {
+        padding-top: 8px;
+        gap: 12px;
+        font-size: 0.72rem;
+    }
+    .legend-square {
+        width: 12px;
+        height: 12px;
+        margin-right: 5px;
+    }
+}
+
+.portrait-main {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.portrait-name-block {
+    text-align: left;
+    flex: 1;
 }
