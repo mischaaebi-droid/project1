@@ -5,7 +5,6 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #f3f1eb;
     color: #111;
 }
 
@@ -24,7 +23,7 @@ body {
 
 .title h1 {
     margin: 0;
-    font-size: clamp(2rem, 3vw, 3.2rem);
+    font-size: clamp(2rem, 3.5vw, 3.2rem);
     line-height: 1.05;
     letter-spacing: -0.04em;
 }
@@ -37,7 +36,7 @@ body {
     font-size: 1.1rem;
     font-weight: 700;
     line-height: 1.5;
-    color: #555;
+    color: #0b0b0b;
 }
 
 .text {
@@ -46,7 +45,7 @@ body {
     padding: 0 20px;
     font-size: 1rem;
     line-height: 1.5;
-    color: #555;
+    color: #1a1a1a;
 }
 
 .bio_text {
@@ -123,7 +122,8 @@ body {
 }
 
 .newspaper-card {
-    background: #fbfaf6;
+    background: white;
+    border: 1px solid #7aa36f;
     border-radius: 1px;
     padding: 22px 26px 20px;
     box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
@@ -478,14 +478,14 @@ body {
     font-weight: 800;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #777;
+    color: #7aa36f;
 }
 
 .search-section input {
     width: 100%;
     padding: 13px 16px;
     border: 1px solid #111;
-    background: #fbfaf6;
+    background: #f4f8ef;
     font-size: 1rem;
     text-align: center;
 }
@@ -515,7 +515,6 @@ body {
 .search-match .newspaper-card {
     background: #f4f8ef;
     border: 1px solid #7aa36f;
-    box-shadow: 0 18px 45px rgba(47, 111, 47, 0.16);
 }
 
 @media (max-width: 700px) {

@@ -259,7 +259,7 @@ Promise.all([
 
                    
                     <div class="proposal-section demands-section">
-                        <h3> inquiries</h3>
+                        <h3> Demands</h3>
                         <div class="proposal-grid">
                             ${createSquares(motionsAndPostulates, successfulMotionsAndPostulates, "motion-square", 0.22)}
                         </div>
@@ -275,7 +275,7 @@ Promise.all([
 
 
                      <div class="proposal-section questions-section">
-                        <h3>Questions</h3>
+                        <h3>Inquiries</h3>
                         <div class="proposal-grid">
                             ${createSquares(interpellations, successfulInterpellations, "interpellation-square", 0)}
                         </div>
