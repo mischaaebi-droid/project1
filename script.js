@@ -3,33 +3,37 @@ Promise.all([
     fetch("nationalraete.json").then(function(response) {
         return response.json();
     }),
+    fetch("staenderaete.json").then(function(response) {
+        return response.json();
+    }),
     fetch("parlamentarier_stats.json").then(function(response) {
         return response.json();
     })
-]).then(function(loadedData) {
-    const nationalraete = loadedData[0];
-    const stats = loadedData[1];
+])
 
+
+.then(function(loadedData) {
+    const nationalraete = loadedData[0];
+    const staenderaete = loadedData[1];
+    const stats = loadedData[2];
+    const a = 0;
     const wrapper = document.querySelector(".swiper-wrapper");
 
-    // Einstellungen, die du bei Bedarf einfach ändern kannst
     const maxSlides = 30;
-    const maxBarValue = 26;
-
-    const averageInterpellations = 8;
-    const averageMotions = 4;
-
-    let currentSort = "success";
+    let currentSort = "success_total";
     let swiper = null;
-
-    // Aus der Statistikliste wird ein schneller Nachschlage-Index erstellt.
-    // Dadurch kann man die Statistik einer Person sehr schnell über person_code finden.
-    //ein Objekt wie folgt: {"3090": {person_code: 3090, interpellationen: 34, motionen: 12, postulate: 5 }, "3127": { person_code: 3127,interpellationen: 8,motionen: 4,postulate: 2}}
 
     const statsByPersonCode = createStatsLookup(stats);
 
-    // Jede Person erhält ihre Statistik direkt als neues Feld "stats".
-    const data = combinePeopleWithStats(nationalraete, statsByPersonCode);
+    const alleParlamentarier = [
+        ...nationalraete,
+        ...staenderaete
+    ];
+
+    const data = combinePeopleWithStats(
+        alleParlamentarier,
+        statsByPersonCode
+    );
 
     renderSlides(currentSort);
     activateSortButtons();
@@ -98,145 +102,118 @@ Promise.all([
         let suffix = "th";
 
         if (lastTwoDigits < 11 || lastTwoDigits > 13) {
-            if (lastDigit === 1) {
-                suffix = "st";
-            }
-
-            if (lastDigit === 2) {
-                suffix = "nd";
-            }
-
-            if (lastDigit === 3) {
-                suffix = "rd";
-            }
+            if (lastDigit === 1) suffix = "st";
+            if (lastDigit === 2) suffix = "nd";
+            if (lastDigit === 3) suffix = "rd";
         }
 
         return rank + suffix + " rank";
-    }
-
-    function getBarWidth(value) {
-        const percentage = (value / maxBarValue) * 90;
-
-        return Math.min(percentage, 100);
     }
 
     function getPersonValue(person, statsKey) {
         return person.stats[statsKey] || 0;
     }
 
+    function createSquares(totalNumber, successfulNumber, typeClass, delayOffset) {
+        let squares = "";
+
+        for (let i = 0; i < totalNumber; i++) {
+            const isSuccessful = i < successfulNumber;
+            const delay = delayOffset + i * 0.012;
+
+            squares += `
+            <span 
+                class="proposal-square ${typeClass} ${isSuccessful ? "successful" : ""}"
+                style="animation-delay: ${delay}s"
+            >
+                ${isSuccessful ? "" : ""}
+            </span>
+        `;
+        }
+
+        return squares;
+    }
 
 
     function createSlide(person, index) {
         const displayName = formatName(person.name);
-        const imageLoading = index === 0 ? "eager" : "lazy";
+        const imageLoading = index < 3 ? "eager" : "lazy";
         const rankLabel = getRankLabel(index + 1);
 
-        const total = getPersonValue(person, "total");
-        const success = getPersonValue(person, "success");
-        const successrate = Math.round(getPersonValue(person, "suc_percent") * 10) / 10;
+        const success = getPersonValue(person, "success_total");
         const interpellations = getPersonValue(person, "interpellationen");
-        const motions = getPersonValue(person, "motionen");
+        const motionsAndPostulates = getPersonValue(person, "mot_and_post");
 
-
-        const totalWidth = getBarWidth(total);
-        const successWidth = getBarWidth(success);
-        const sucessrateWidth = getBarWidth(successrate);
-
-        const interpellationWidth = getBarWidth(interpellations);
-        const motionWidth = getBarWidth(motions);
-
-        const averageInterpellationWidth = getBarWidth(averageInterpellations);
-        const averageMotionWidth = getBarWidth(averageMotions);
+        const successfulInterpellations = getPersonValue(person, "success_interpellationen");
+        const successfulMotionsAndPostulates = getPersonValue(person, "success_mot_and_post");
 
         return `
-      <div class="swiper-slide">
-        <div class="portrait-card">
-          <div class="portrait-left">
-            <img src="${person.image}" alt="${person.name}" loading="${imageLoading}">
-            <p class="text">Party: ${person.party ?? ""}, District: ${person.place ?? ""}</p>
-          </div>
+        <div class="swiper-slide">
+            <div class="portrait-card newspaper-card">
 
-          <div class="portrait-right">
-            <div class="rank-label">${rankLabel}</div>
-            <h2>${displayName}</h2>
+             <div class="rank-label">${rankLabel}</div>
 
-            <div class="chart-box">
-              <div class="chart-title">Interfudi</div>
+                <div class="portrait-header">
+                    <div class="portrait-left">
+                        <img src="${person.image}" alt="${person.name}" loading="${imageLoading}">
+                    </div>
 
-              <div class="bar-row">
-                <span>Total<br> proposals</span>
-                <div class="bar-bg">
-                  <div class="bar interpellation" style="width: ${totalWidth}%"></div>
+                    <div class="portrait-name-block">
+                        
+                        <h2>${displayName}</h2>
+                        
+                    </div>
+
+                    <div class="success-summary">
+                        
+                        <div>
+                       
+                            <p>Total success</p>
+                            <strong>${success}</strong>
+                            
+                        </div>
+                    </div>
+                    
                 </div>
-                <strong>${total}</strong>
-              </div>
-              
-              
-               <div class="bar-row">
-                <span>Successful proposals</span>
-                <div class="bar-bg">
-                  <div class="bar interpellation" style="width: ${successWidth}%"></div>
-                </div>
-                <strong>${success}</strong>
-              </div>
-              
-              
-               <div class="bar-row">
-                <span>Success rate</span>
-                <div class="bar-bg">
-                  <div class="bar interpellation" style="width: ${sucessrateWidth}%"></div>
-                </div>
-                <strong>${successrate} %</strong>
-              </div>
-              
-              
-              
-              
-              <div class="bar-row">
-                <span>Questions</span>
-                <div class="bar-bg">
-                  <div class="bar interpellation" style="width: ${interpellationWidth}%"></div>
-                </div>
-                <strong>${interpellations}</strong>
-              </div>
+ <p class="bio_text">Party: ${person.party ?? ""}, District: ${person.place ?? ""}</p>
+                
 
-              <div class="bar-row">
-                <span>Council avg.</span>
-                <div class="bar-bg">
-                  <div class="bar average" style="width: ${averageInterpellationWidth}%"></div>
+                <div class="square-chart">
+
+                   
+
+                    <div class="proposal-section">
+                        <h3>Demands</h3>
+                        <div class="proposal-grid">
+                            ${createSquares(motionsAndPostulates, successfulMotionsAndPostulates, "motion-square", 0.22)}
+                        </div>
+                    </div>
+
+                     <div class="proposal-section">
+                        <h3>Questions</h3>
+                        <div class="proposal-grid">
+                            ${createSquares(interpellations, successfulInterpellations, "interpellation-square", 0)}
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="legend">
+                        <span><i class="legend-square interpellation-square"></i> No success</span>
+                        <span><i class="legend-square motion-square"></i> Success</span>
+                        
+                    </div>
+
                 </div>
-                <strong>${averageInterpellations}</strong>
-              </div>
-
-              <div class="chart-title motions-title">Motions</div>
-
-              <div class="bar-row">
-                <span>This member</span>
-                <div class="bar-bg">
-                  <div class="bar motion" style="width: ${motionWidth}%"></div>
-                </div>
-                <strong>${motions}</strong>
-              </div>
-
-              <div class="bar-row">
-                <span>Council avg.</span>
-                <div class="bar-bg">
-                  <div class="bar average" style="width: ${averageMotionWidth}%"></div>
-                </div>
-                <strong>${averageMotions}</strong>
-              </div>
-
-              <div class="legend">
-                <span><i class="dot interpellation-dot"></i> Interpellations</span>
-                <span><i class="dot motion-dot"></i> Motions</span>
-                <span><i class="dot average-dot"></i> Council average</span>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     `;
     }
+
+
+
 
     function renderSlides(sortKey) {
         const sortedData = getSortedData(sortKey);
@@ -255,17 +232,21 @@ Promise.all([
         swiper = new Swiper(".swiper", {
             loop: true,
             initialSlide: 0,
-            centeredSlides: true,
+            centeredSlides: false,
             slidesPerView: 1,
-            spaceBetween: 0,
+            spaceBetween: 18,
             speed: 500,
             grabCursor: true,
             watchSlidesProgress: true,
 
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev"
+            breakpoints: {
+                1000: {
+                    slidesPerView: 3,
+                    spaceBetween: 22
+                }
             },
+
+
 
             keyboard: {
                 enabled: true
