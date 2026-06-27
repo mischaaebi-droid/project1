@@ -107,6 +107,7 @@ Promise.all([
 
 
     renderSlides(currentSort);
+    moveSearchForMobile();
     createSearchList();
     activateSearch();
     activateSortButtons();
@@ -213,7 +214,7 @@ Promise.all([
         <div class="swiper-slide placeholder-slide">
             <div class="portrait-card newspaper-card placeholder-card">
 
-                <div class="rank-label placeholder-rank">SEARCH</div>
+                <div class="rank-label placeholder-rank">Search</div>
 
                 <div class="portrait-header">
                     <div class="portrait-main">
@@ -222,6 +223,21 @@ Promise.all([
                             <div class="head-circle"></div>
                             <div class="shoulder-shape"></div>
                         </div>
+
+                    
+                      <div class="portrait-name-block-handy">
+            <h2>Preferred Politican?</h2>
+            <p class="bio_text">
+                Type a name in search field above
+
+                 <br>Total success?
+        
+
+            </p>
+        </div>
+
+
+
 
                         <div class="success-summary placeholder-success">
                             <p>Total<br>success</p>
@@ -297,6 +313,16 @@ Promise.all([
             <img src="${person.image}" alt="${person.name}" loading="${imageLoading}">
         </div>
 
+        <div class="portrait-name-block-handy">
+            <h2>${displayName}</h2>
+            <p class="bio_text">
+                ${person.chamber ?? ""}, ${person.party ?? ""}, ${person.place ?? ""}
+
+                 <br>Total<suc> ${success}</suc> success
+        
+
+            </p>
+        </div>
 
 
   <div class="success-summary">
@@ -308,13 +334,12 @@ Promise.all([
 
     </div>
 
-  <div class="portrait-name-block">
+        <div class="portrait-name-block">
             <h2>${displayName}</h2>
             <p class="bio_text">
                 ${person.chamber ?? ""}, ${person.party ?? ""}, ${person.place ?? ""}
             </p>
         </div>
-
 </div>
                 
              <div class="square-chart">
@@ -365,7 +390,20 @@ Promise.all([
     }
 
 
+    function moveSearchForMobile() {
 
+        if (window.innerWidth > 999) {
+            return;
+        }
+
+        const search = document.querySelector(".search-section");
+        const slides = wrapper.querySelectorAll(".swiper-slide");
+
+        if (slides.length >= 2) {
+            slides[1].after(search);
+        }
+
+    }
 
 
 

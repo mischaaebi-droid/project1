@@ -51,6 +51,7 @@ body {
 .text {
     max-width: 700px;
     margin: 14px auto 24px;
+    font-family: Baskerville, Georgia, "Times New Roman", serif;
     padding: 0 20px;
     font-size: 1rem;
     line-height: 1.5;
@@ -72,25 +73,24 @@ body {
 
 .search-section {
     max-width: 520px;
-    margin: 50px auto 0;
+    margin: 20px auto 0;
     text-align: center;
 }
 
 .search-section label {
     display: block;
     margin-bottom: 8px;
-    font-size: 0.78rem;
-    font-weight: 800;
+    font-size: 1rem;
+    font-weight: 700;
     letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #7aa36f;
+    color: #0b0b0b;
 }
 
 .search-section input {
     width: 100%;
     padding: 13px 16px;
     border: 1px solid #111;
-    background: #f4f8ef;
+    background: ;
     font-size: 1rem;
     text-align: center;
 }
@@ -153,7 +153,6 @@ body {
     margin: 0 auto 14px;
     padding: 5px 14px 4px;
     border: 1px solid #111;
-    border-radius: 999px;
     background: #111;
     color: #fbfaf6;
     font-size: 1rem;
@@ -247,18 +246,18 @@ body {
 }
 
 .proposal-section h3 {
-    margin: 0 0 10px;
+    margin: 0 0 8px;
     font-size: 0.95rem;
     line-height: 1.2;
     letter-spacing: 0.03em;
 }
 
 .demands-section h3 {
-    color: #c85a43;
+    color: #B7924B;
 }
 
 .questions-section h3 {
-    color: #3f6fa9;
+    color: #6678A6;
 }
 
 .proposal-grid {
@@ -288,17 +287,17 @@ body {
     height: 10px;
     border: none;
     border-radius: 50%;
-    background: #3f6fa9;
-    opacity: 0.45;
+    background: #6678A6;
+    opacity: 0.80;
 }
 
 .motion-square {
-    border: 2px solid #c85a43;
+    border: 2px solid #B7924B;
     background: transparent;
 }
 
 .motion-square.successful {
-    background: #c85a43;
+    background: #B7924B;
 }
 
 
@@ -325,21 +324,22 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 11px;
-    height: 11px;
+    width: 9px;
+    height: 9px;
+    margin-bottom: 2px;
     margin-right: 8px;
     vertical-align: middle;
     border-radius: 2px;
 }
 
 .legend-square.no-success {
-    border: 2px solid #c85a43;
+    border: 2px solid #B7924B;
     background: transparent;
 }
 
 .legend-square.success {
-    border: 2px solid #c85a43;
-    background: #c85a43;
+    border: 2px solid #B7924B;
+    background: #B7924B;
 }
 
 
@@ -431,46 +431,10 @@ body {
         padding-top: 4px;
     }
     .legend {
-        padding-top: 8px;
+        padding-top: 0px;
     }
-}
-
-
-/* =========================================================
-   10. Tablet and narrow desktop layout
-   ========================================================= */
-
-@media (max-width: 999px) {
-    .swiper-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        transform: none !important;
-    }
-    .swiper-slide {
-        width: 100% !important;
-        margin: 0 !important;
-    }
-}
-
-@media (max-width: 900px) {
-    .portrait-card {
-        max-width: 620px;
-    }
-    .portrait-header {
-        grid-template-columns: 1fr;
-        gap: 18px;
-        text-align: center;
-    }
-    .portrait-left img {
-        margin: 0 auto;
-    }
-    .success-summary {
-        justify-content: center;
-        padding-top: 0;
-        padding-left: 0;
-        border-left: 0;
-        text-align: left;
+    .portrait-name-block-handy {
+        display: none;
     }
 }
 
@@ -479,7 +443,20 @@ body {
    11. Mobile layout
    ========================================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 999px) {
+    .swiper-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        transform: none !important;
+        gap: 14px;
+    }
+    .swiper-slide {
+        width: 100% !important;
+        margin: 0 !important;
+        min-height: 0;
+        padding: 0;
+    }
     .page {
         padding: 0 12px;
     }
@@ -492,19 +469,13 @@ body {
     }
     .text {
         margin: 10px auto 14px;
+        font-family: Baskerville, Georgia, "Times New Roman", serif;
         padding: 0 8px;
-        font-size: 0.9rem;
+        font-size: 1rem;
         line-height: 1.35;
     }
     .search-section {
         margin: 22px auto 8px;
-    }
-    .swiper-wrapper {
-        gap: 14px;
-    }
-    .swiper-slide {
-        min-height: 0;
-        padding: 0;
     }
     .newspaper-card {
         padding: 18px 16px 16px;
@@ -519,8 +490,8 @@ body {
         padding-bottom: 4px;
     }
     .portrait-left img {
-        width: 78px;
-        height: 78px;
+        width: 100px;
+        height: 100px;
     }
     .portrait-name-block h2 {
         margin-top: 15px;
@@ -539,7 +510,7 @@ body {
         font-size: 0.64rem;
     }
     .success-summary strong {
-        font-size: 1.75rem;
+        font-size: 1.1rem;
     }
     .square-chart {
         padding-top: 2px;
@@ -571,6 +542,27 @@ body {
         height: 12px;
         margin-right: 5px;
     }
+    .portrait-name-block {
+        display: none;
+    }
+    .success-summary {
+        display: none;
+    }
+    .portrait-name-block-handy {
+        display: block;
+        margin: 0 0 7px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(1rem, 1.2vw, 1.6rem);
+        line-height: 0.95;
+        letter-spacing: -0.05em;
+        flex: 1;
+        text-align: left;
+    }
+    .portrait-name-block-handy h2 {
+        margin-top: 15px;
+        margin-bottom: 4px;
+        font-size: 1.65rem;
+    }
 }
 
 
@@ -579,14 +571,14 @@ body {
    ========================================================= */
 
 .placeholder-card {
-    background: #f6f7f7;
-    border-color: #7aa36f;
+    background: #fcfcfc;
+    border-color: #999999;
 }
 
 .placeholder-rank {
-    background: #acadab;
+    background: #fcfcfc;
     border-color: #7aa36f;
-    color: white;
+    color: #999999;
 }
 
 .placeholder-card h2,
@@ -628,6 +620,16 @@ body {
     opacity: 0.18 !important;
     background: #8e8b8b;
     border: 2px solid #f7f3f2;
+}
+
+.placeholder-card .legend-square.no-success {
+    background: #d3d3d3;
+    border: 2px solid #d3d3d3;
+}
+
+.placeholder-card .legend-square.success {
+    background: #d3d3d3;
+    border: 2px solid #d3d3d3;
 }
 
 .placeholder-grid {
