@@ -115,7 +115,7 @@ body {
 .newspaper-card {
     background: #fbfaf6;
     border-radius: 1px;
-    padding: 36px 42px 30px;
+    padding: 32px 42px 30px;
     box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
 }
 
@@ -243,14 +243,9 @@ body {
     font-weight: 700;
     line-height: 1;
     flex: 0 0 auto;
-    opacity: 0;
-    transform: translateY(5px) scale(0.75);
+    opacity: 1;
+    transform: none;
     border-radius: 2px;
-}
-
-.swiper-slide-visible .proposal-square,
-.swiper-slide-active .proposal-square {
-    animation: square-appear 0.32s ease forwards;
 }
 
 @keyframes square-appear {
@@ -336,9 +331,8 @@ body {
     }
     .success-summary {
         border-left: 0;
-        border-top: 1px solid #d8d2c4;
         padding-left: 0;
-        padding-top: 22px;
+        padding-top: 0px;
         justify-content: center;
         text-align: left;
     }
@@ -359,7 +353,7 @@ body {
         font-size: 2.3rem;
     }
     .success-summary strong {
-        font-size: 3.8rem;
+        font-size: 2rem;
     }
     .proposal-section h3 {
         font-size: 1.05rem;
@@ -455,4 +449,58 @@ body {
         width: 100% !important;
         margin: 0 !important;
     }
+}
+
+.search-section {
+    max-width: 520px;
+    margin: 50px auto 0px;
+    text-align: center;
+}
+
+.search-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #777;
+}
+
+.search-section input {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1px solid #111;
+    border-radius: 999px;
+    background: #fbfaf6;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.search-result {
+    margin-top: 28px;
+}
+
+.search-result .swiper-slide {
+    padding: 0;
+}
+
+.no-result {
+    color: #777;
+    font-size: 0.95rem;
+}
+
+@media (min-width: 1000px) {
+    .swiper-wrapper {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        align-items: start;
+    }
+}
+
+.search-match .newspaper-card {
+    background: #f4f8ef;
+    border: 1px solid #7aa36f;
+    box-shadow: 0 18px 45px rgba(47, 111, 47, 0.16);
 }

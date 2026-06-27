@@ -19,9 +19,13 @@ Promise.all([
     const a = 0;
     const wrapper = document.querySelector(".swiper-wrapper");
 
+    const searchInput = document.querySelector("#politician-search");
+    const searchList = document.querySelector("#politician-list");
+    const searchResult = document.querySelector(".search-result");
+
     const maxSlides = 30;
     let currentSort = "success_total";
-    let swiper = null;
+
 
     const statsByPersonCode = createStatsLookup(stats);
 
@@ -35,7 +39,76 @@ Promise.all([
         statsByPersonCode
     );
 
+
+    function createSearchList() {
+        const sortedData = getSortedData(currentSort);
+
+        const optionsHtml = sortedData.map(function(person) {
+            return `<option value="${formatName(person.name)}"></option>`;
+        });
+
+        searchList.innerHTML = optionsHtml.join("");
+    }
+
+    function activateSearch() {
+        searchInput.addEventListener("input", function() {
+            const searchTerm = searchInput.value.trim().toLowerCase();
+
+            if (searchTerm === "") {
+                searchResult.innerHTML = "";
+                return;
+            }
+
+            const sortedData = getSortedData(currentSort);
+
+            const foundIndex = sortedData.findIndex(function(person) {
+                const formattedName = formatName(person.name).toLowerCase();
+                const originalName = person.name.toLowerCase();
+
+                return (
+                    formattedName.includes(searchTerm) ||
+                    originalName.includes(searchTerm)
+                );
+            });
+
+            if (foundIndex === -1) {
+                searchResult.innerHTML = `<p class="no-result">No politician found.</p>`;
+                return;
+            }
+
+            const foundPerson = sortedData[foundIndex];
+
+            const topTwo = getSortedData(currentSort).slice(0, 2);
+            const newVisibleData = [
+                ...topTwo,
+                foundPerson
+            ];
+
+            const newHtml = newVisibleData.map(function(person, index) {
+                if (index === 2) {
+                    return createSlide(person, foundIndex).replace(
+                        '<div class="swiper-slide">',
+                        '<div class="swiper-slide search-match">'
+                    );
+                }
+
+                return createSlide(person, index);
+            });
+
+            wrapper.innerHTML = newHtml.join("");
+            searchResult.innerHTML = "";
+        });
+    }
+
+
+
+
+
+
+
     renderSlides(currentSort);
+    createSearchList();
+    activateSearch();
     activateSortButtons();
 
     function createStatsLookup(statsList) {
@@ -215,58 +288,22 @@ Promise.all([
     }
 
 
-
-
     function renderSlides(sortKey) {
         const sortedData = getSortedData(sortKey);
-        const visibleData = sortedData.slice(0, maxSlides);
+        const visibleData = sortedData.slice(0, 3);
 
         const slideHtml = visibleData.map(function(person, index) {
             return createSlide(person, index);
         });
 
-        if (window.innerWidth >= 1000) {
-            wrapper.innerHTML = slideHtml.join("");
-        } else {
-            wrapper.innerHTML = slideHtml.slice(0, 3).join("");
-        }
-
-        if (swiper !== null) {
-            swiper.destroy(true, true);
-        }
-
-        if (window.innerWidth >= 1000) {
-
-            swiper = new Swiper(".swiper", {
-                loop: true,
-                initialSlide: 0,
-                centeredSlides: false,
-                slidesPerView: 3,
-                spaceBetween: 22,
-                speed: 500,
-                grabCursor: true,
-                watchSlidesProgress: true,
-
-                keyboard: {
-                    enabled: true
-                }
-            });
-
-        } else {
-
-            wrapper.innerHTML = slideHtml.slice(0, 3).join("");
-
-        }
-
-
-
-
-
-
-
-
-
+        wrapper.innerHTML = slideHtml.join("");
     }
+
+
+
+
+
+
 
     function activateSortButtons() {
         const sortButtons = document.querySelectorAll(".sort-button");

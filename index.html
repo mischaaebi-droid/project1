@@ -8,7 +8,7 @@
 
     <title>Nationalrat Portrait</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,14 +16,22 @@
 
     <div class="page">
         <div class="title">
-            <h1>Which politicians ask most questions?</h1>
+            <h1> Which politicians get what they want through?</h1>
         </div>
 
         <div>
             <p class="text">Our tool calculates which members of the Swiss National Council have asked the most questions (interpellations) and submitted the most proposals (motions).</p>
         </div>
 
+        <div class="search-section">
+            <label for="politician-search">Check your preferred politician</label>
 
+            <input id="politician-search" list="politician-list" type="text" placeholder="Type a name..." autocomplete="off">
+
+            <datalist id="politician-list"></datalist>
+
+            <div class="search-result"></div>
+        </div>
 
 
 
@@ -31,13 +39,19 @@
 
             <div class="swiper-wrapper">
             </div>
-
-
-
-
         </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <div class="search-section">
+            <label for="politician-search">Check your preferred politician</label>
+
+            <input id="politician-search" list="politician-list" type="text" placeholder="Type a name..." autocomplete="off">
+
+            <datalist id="politician-list"></datalist>
+
+            <div class="search-result"></div>
+        </div>
+
+
         <script src="script.js"></script>
 
     </div>
