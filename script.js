@@ -225,35 +225,47 @@ Promise.all([
             return createSlide(person, index);
         });
 
-        wrapper.innerHTML = slideHtml.join("");
+        if (window.innerWidth >= 1000) {
+            wrapper.innerHTML = slideHtml.join("");
+        } else {
+            wrapper.innerHTML = slideHtml.slice(0, 3).join("");
+        }
 
         if (swiper !== null) {
             swiper.destroy(true, true);
         }
 
-        swiper = new Swiper(".swiper", {
-            loop: true,
-            initialSlide: 0,
-            centeredSlides: false,
-            slidesPerView: 1,
-            spaceBetween: 18,
-            speed: 500,
-            grabCursor: true,
-            watchSlidesProgress: true,
+        if (window.innerWidth >= 1000) {
 
-            breakpoints: {
-                1000: {
-                    slidesPerView: 3,
-                    spaceBetween: 22
+            swiper = new Swiper(".swiper", {
+                loop: true,
+                initialSlide: 0,
+                centeredSlides: false,
+                slidesPerView: 3,
+                spaceBetween: 22,
+                speed: 500,
+                grabCursor: true,
+                watchSlidesProgress: true,
+
+                keyboard: {
+                    enabled: true
                 }
-            },
+            });
+
+        } else {
+
+            wrapper.innerHTML = slideHtml.slice(0, 3).join("");
+
+        }
 
 
 
-            keyboard: {
-                enabled: true
-            }
-        });
+
+
+
+
+
+
     }
 
     function activateSortButtons() {

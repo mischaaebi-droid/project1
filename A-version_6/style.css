@@ -1,430 +1,445 @@
-                                                                                * {
-                                                                                box-sizing: border-box;
-                                                                            }
-                                                                            
-                                                                            body {
-                                                                                margin: 0;
-                                                                                font-family: Arial, Helvetica, sans-serif;
-                                                                                background: #f3f1eb;
-                                                                                color: #111;
-                                                                            }
-                                                                            
-                                                                            .page {
-                                                                                max-width: 1400px;
-                                                                                margin: 0 auto;
-                                                                                padding: 0 32px;
-                                                                            }
-                                                                            
-                                                                            .title {
-                                                                                max-width: 900px;
-                                                                                margin: 28px auto 0;
-                                                                                padding: 0 20px;
-                                                                                text-align: center;
-                                                                            }
-                                                                            
-                                                                            .title h1 {
-                                                                                margin: 0;
-                                                                                font-size: clamp(2rem, 3vw, 3.2rem);
-                                                                                line-height: 1.05;
-                                                                                letter-spacing: -0.04em;
-                                                                            }
-                                                                            
-                                                                            .text {
-                                                                                max-width: 700px;
-                                                                                margin: 14px auto 24px;
-                                                                                padding: 0 20px;
-                                                                                text-align: center;
-                                                                                font-size: 1rem;
-                                                                                line-height: 1.5;
-                                                                                color: #555;
-                                                                            }
-                                                                            
-                                                                            .bio_text {
-                                                                                max-width: 700px;
-                                                                                padding: 0 2px;
-                                                                                font-size: 0.85rem;
-                                                                                line-height: 1.5;
-                                                                                color: #555;
-                                                                            }
-                                                                            
-                                                                            .sort-controls {
-                                                                                display: flex;
-                                                                                justify-content: center;
-                                                                                gap: 12px;
-                                                                                margin: 0 auto 18px;
-                                                                            }
-                                                                            
-                                                                            .sort-button {
-                                                                                border: 1px solid #111;
-                                                                                background: transparent;
-                                                                                color: #111;
-                                                                                padding: 9px 14px;
-                                                                                border-radius: 999px;
-                                                                                font-size: 0.85rem;
-                                                                                cursor: pointer;
-                                                                            }
-                                                                            
-                                                                            .sort-button.active {
-                                                                                background: #111;
-                                                                                color: #f3f3f1;
-                                                                            }
-                                                                            
-                                                                            .swiper {
-                                                                                width: 100%;
-                                                                                padding: 0 0 55px;
-                                                                                overflow: hidden;
-                                                                            }
-                                                                            
-                                                                            .swiper-wrapper {
-                                                                                align-items: center;
-                                                                            }
-                                                                            
-                                                                            .swiper-slide {
-                                                                                min-height: 500px;
-                                                                                padding: 22px 20px 30px;
-                                                                                opacity: 1;
-                                                                                transform: scale(1);
-                                                                                filter: blur(0);
-                                                                            }
-                                                                            
-                                                                            .swiper-slide-active {
-                                                                                opacity: 1;
-                                                                                transform: scale(1);
-                                                                                filter: blur(0);
-                                                                            }
-                                                                            
-                                                                            .swiper-button-prev,
-                                                                            .swiper-button-next {
-                                                                                color: #111;
-                                                                                top: 35%;
-                                                                            }
-                                                                            
-                                                                            .swiper-button-prev {
-                                                                                left: 14%;
-                                                                            }
-                                                                            
-                                                                            .swiper-button-next {
-                                                                                right: 14%;
-                                                                            }
-                                                                            
-                                                                            .portrait-card {
-                                                                                max-width: 1120px;
-                                                                                margin: 0 auto;
-                                                                            }
-                                                                            
-                                                                            .newspaper-card {
-                                                                                background: #fbfaf6;
-                                                                                border-radius: 1px;
-                                                                                padding: 36px 42px 30px;
-                                                                                box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
-                                                                            }
-                                                                            
-                                                                            .portrait-header {
-                                                                                display: grid;
-                                                                                grid-template-columns: 130px 1fr 320px;
-                                                                                gap: 34px;
-                                                                                align-items: center;
-                                                                                padding-bottom: 10px;
-                                                                            }
-                                                                            
-                                                                            .portrait-left img {
-                                                                                display: block;
-                                                                                width: 125px;
-                                                                                height: 125px;
-                                                                                object-fit: cover;
-                                                                                object-position: center top;
-                                                                                border-radius: 50%;
-                                                                                filter: grayscale(100%);
-                                                                            }
-                                                                            
-                                                                            .portrait-name-block {
-                                                                                text-align: left;
-                                                                            }
-                                                                            
-                                                                            .rank-label {
-                                                                                display: table;
-                                                                                margin: 0 auto 26px;
-                                                                                padding: 7px 18px 6px;
-                                                                                font-size: 1.25rem;
-                                                                                font-weight: 800;
-                                                                                letter-spacing: 0.08em;
-                                                                                color: #fbfaf6;
-                                                                                background: #111;
-                                                                                border: 1px solid #111;
-                                                                                border-radius: 999px;
-                                                                                text-transform: uppercase;
-                                                                            }
-                                                                            
-                                                                            .portrait-name-block h2 {
-                                                                                margin: 0 0 10px;
-                                                                                font-family: Georgia, "Times New Roman", serif;
-                                                                                font-size: clamp(1rem, 1.2vw, 1.6rem);
-                                                                                line-height: 0.95;
-                                                                                letter-spacing: -0.05em;
-                                                                            }
-                                                                            
-                                                                            .portrait-name-block .text {
-                                                                                max-width: none;
-                                                                                margin: 0;
-                                                                                padding: 0;
-                                                                                text-align: left;
-                                                                                font-size: 1rem;
-                                                                                color: #555;
-                                                                            }
-                                                                            
-                                                                            .success-summary {
-                                                                                display: flex;
-                                                                                justify-content: center;
-                                                                                align-items: center;
-                                                                                border-left: 1px solid #d8d2c4;
-                                                                                padding-left: 0;
-                                                                                text-align: center;
-                                                                                width: 100%;
-                                                                            }
-                                                                            
-                                                                            .success-summary div {
-                                                                                display: flex;
-                                                                                flex-direction: column;
-                                                                                align-items: center;
-                                                                                justify-content: center;
-                                                                            }
-                                                                            
-                                                                            .success-summary p {
-                                                                                margin: 6px 0 0;
-                                                                                font-size: 0.68rem;
-                                                                                font-weight: 600;
-                                                                                letter-spacing: 0.14em;
-                                                                                text-transform: uppercase;
-                                                                                color: #8b8578;
-                                                                                line-height: 1.2;
-                                                                            }
-                                                                            
-                                                                            .success-summary strong {
-                                                                                display: block;
-                                                                                margin: 0;
-                                                                                font-family: Georgia, "Times New Roman", serif;
-                                                                                font-size: 2.7rem;
-                                                                                font-weight: 200;
-                                                                                color: #111;
-                                                                                line-height: 0.95;
-                                                                            }
-                                                                            
-                                                                            .square-chart {
-                                                                                padding-top: 5px;
-                                                                            }
-                                                                            
-                                                                            .proposal-section {
-                                                                                padding: 10px 0 20px;
-                                                                            }
-                                                                            
-                                                                            .proposal-section+.proposal-section {
-                                                                                padding-top: 10px;
-                                                                            }
-                                                                            
-                                                                            .proposal-section h3 {
-                                                                                margin: 0 0 10px;
-                                                                                text-transform: uppercase;
-                                                                                letter-spacing: 0.03em;
-                                                                                font-size: 0.95rem;
-                                                                                line-height: 1.2;
-                                                                            }
-                                                                            
-                                                                            .proposal-section:first-child h3 {
-                                                                                color: #c85a43;
-                                                                            }
-                                                                            
-                                                                            .proposal-section:nth-child(2) h3 {
-                                                                                color: #3f6fa9;
-                                                                            }
-                                                                            
-                                                                            .proposal-grid {
-                                                                                display: flex;
-                                                                                flex-wrap: wrap;
-                                                                                gap: 7px;
-                                                                                max-width: 100%;
-                                                                            }
-                                                                            
-                                                                            .proposal-square {
-                                                                                width: 16px;
-                                                                                height: 16px;
-                                                                                display: inline-flex;
-                                                                                align-items: center;
-                                                                                justify-content: center;
-                                                                                font-size: 14px;
-                                                                                font-weight: 700;
-                                                                                line-height: 1;
-                                                                                flex: 0 0 auto;
-                                                                                opacity: 0;
-                                                                                transform: translateY(5px) scale(0.75);
-                                                                                border-radius: 2px;
-                                                                            }
-                                                                            
-                                                                            .swiper-slide-visible .proposal-square,
-                                                                            .swiper-slide-active .proposal-square {
-                                                                                animation: square-appear 0.32s ease forwards;
-                                                                            }
-                                                                            
-                                                                            @keyframes square-appear {
-                                                                                to {
-                                                                                    opacity: 1;
-                                                                                    transform: translateY(0) scale(1);
-                                                                                }
-                                                                            }
-                                                                            
-                                                                            .interpellation-square {
-                                                                                background: transparent;
-                                                                                border: 2px solid #3f6fa9;
-                                                                            }
-                                                                            
-                                                                            .interpellation-square.successful {
-                                                                                background: #3f6fa9;
-                                                                            }
-                                                                            
-                                                                            .motion-square {
-                                                                                background: transparent;
-                                                                                border: 2px solid #c85a43;
-                                                                            }
-                                                                            
-                                                                            .motion-square.successful {
-                                                                                background: #c85a43;
-                                                                            }
-                                                                            
-                                                                            .legend {
-                                                                                display: flex;
-                                                                                flex-wrap: wrap;
-                                                                                gap: 34px;
-                                                                                align-items: center;
-                                                                                padding-top: 24px;
-                                                                                font-size: 0.95rem;
-                                                                                color: #444;
-                                                                            }
-                                                                            
-                                                                            .legend-square {
-                                                                                width: 15px;
-                                                                                height: 15px;
-                                                                                display: inline-flex;
-                                                                                align-items: center;
-                                                                                justify-content: center;
-                                                                                margin-right: 8px;
-                                                                                vertical-align: middle;
-                                                                            }
-                                                                            
-                                                                            .legend-square.no-success {
-                                                                                background: transparent;
-                                                                                border: 2px solid black;
-                                                                            }
-                                                                            
-                                                                            .legend-square.success {
-                                                                                background: black;
-                                                                                border: 2px solid black;
-                                                                            }
-                                                                            
-                                                                            .successful-demo {
-                                                                                background: #fbfaf6;
-                                                                                border: 2px solid #2f6f2f;
-                                                                                color: #2f6f2f;
-                                                                                font-weight: 700;
-                                                                            }
-                                                                            
-                                                                            @media (max-width: 900px) {
-                                                                                .portrait-card {
-                                                                                    max-width: 620px;
-                                                                                }
-                                                                                .portrait-header {
-                                                                                    grid-template-columns: 1fr;
-                                                                                    gap: 18px;
-                                                                                    text-align: center;
-                                                                                }
-                                                                                .portrait-left img {
-                                                                                    margin: 0 auto;
-                                                                                }
-                                                                                .portrait-name-block {
-                                                                                    text-align: center;
-                                                                                }
-                                                                                .portrait-name-block .text {
-                                                                                    text-align: center;
-                                                                                }
-                                                                                .success-summary {
-                                                                                    border-left: 0;
-                                                                                    border-top: 1px solid #d8d2c4;
-                                                                                    padding-left: 0;
-                                                                                    padding-top: 22px;
-                                                                                    justify-content: center;
-                                                                                    text-align: left;
-                                                                                }
-                                                                            }
-                                                                            
-                                                                            @media (max-width: 700px) {
-                                                                                .title {
-                                                                                    margin: 22px auto 0;
-                                                                                }
-                                                                                .swiper-slide {
-                                                                                    min-height: 520px;
-                                                                                    padding: 1px 12px 30px;
-                                                                                }
-                                                                                .newspaper-card {
-                                                                                    padding: 26px 22px;
-                                                                                }
-                                                                                .portrait-name-block h2 {
-                                                                                    font-size: 2.3rem;
-                                                                                }
-                                                                                .success-summary strong {
-                                                                                    font-size: 3.8rem;
-                                                                                }
-                                                                                .proposal-section h3 {
-                                                                                    font-size: 1.05rem;
-                                                                                }
-                                                                                .proposal-grid {
-                                                                                    gap: 6px;
-                                                                                }
-                                                                                .proposal-square {
-                                                                                    width: 16px;
-                                                                                    height: 16px;
-                                                                                    font-size: 12px;
-                                                                                }
-                                                                                .legend {
-                                                                                    gap: 14px;
-                                                                                    font-size: 0.82rem;
-                                                                                }
-                                                                            }
-                                                                            
-                                                                            @media (min-width: 1000px) {
-                                                                                .swiper-wrapper {
-                                                                                    align-items: stretch !important;
-                                                                                }
-                                                                                .swiper-slide {
-                                                                                    height: auto !important;
-                                                                                    display: flex !important;
-                                                                                    align-items: stretch !important;
-                                                                                    .swiper-slide .newspaper-card {
-                                                                                        width: 100%;
-                                                                                        min-height: 760px;
-                                                                                        display: flex;
-                                                                                        flex-direction: column;
-                                                                                    }
-                                                                                    .square-chart {
-                                                                                        flex: 0;
-                                                                                    }
-                                                                                    .portrait-header {
-                                                                                        grid-template-columns: 130px 1fr 95px;
-                                                                                        column-gap: 18px;
-                                                                                        align-items: center;
-                                                                                    }
-                                                                                    .success-summary {
-                                                                                        grid-column: auto;
-                                                                                        border-left: 1px solid #d8d2c4;
-                                                                                        padding-left: 0;
-                                                                                        width: 100%;
-                                                                                        justify-self: stretch;
-                                                                                        display: flex;
-                                                                                        justify-content: center;
-                                                                                        align-items: center;
-                                                                                        text-align: center;
-                                                                                    }
-                                                                                    .success-summary div {
-                                                                                        display: flex;
-                                                                                        flex-direction: column;
-                                                                                        align-items: center;
-                                                                                        justify-content: center;
-                                                                                    }
-                                                                                }
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f1eb;
+    color: #111;
+}
+
+.page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.title {
+    max-width: 900px;
+    margin: 28px auto 0;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.title h1 {
+    margin: 0;
+    font-size: clamp(2rem, 3vw, 3.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+}
+
+.text {
+    max-width: 700px;
+    margin: 14px auto 24px;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.bio_text {
+    max-width: 700px;
+    padding: 0 2px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.sort-controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 0 auto 18px;
+}
+
+.sort-button {
+    border: 1px solid #111;
+    background: transparent;
+    color: #111;
+    padding: 9px 14px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.sort-button.active {
+    background: #111;
+    color: #f3f3f1;
+}
+
+.swiper {
+    width: 100%;
+    padding: 0 0 55px;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    align-items: center;
+}
+
+.swiper-slide {
+    min-height: 500px;
+    padding: 22px 20px 30px;
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+}
+
+.swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #111;
+    top: 35%;
+}
+
+.swiper-button-prev {
+    left: 14%;
+}
+
+.swiper-button-next {
+    right: 14%;
+}
+
+.portrait-card {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.newspaper-card {
+    background: #fbfaf6;
+    border-radius: 1px;
+    padding: 36px 42px 30px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+}
+
+.portrait-header {
+    display: grid;
+    grid-template-columns: 130px 1fr 320px;
+    gap: 34px;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.portrait-left img {
+    display: block;
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    filter: grayscale(100%);
+}
+
+.portrait-name-block {
+    text-align: left;
+}
+
+.rank-label {
+    display: table;
+    margin: 0 auto 26px;
+    padding: 7px 18px 6px;
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: #fbfaf6;
+    background: #111;
+    border: 1px solid #111;
+    border-radius: 999px;
+    text-transform: uppercase;
+}
+
+.portrait-name-block h2 {
+    margin: 0 0 10px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1rem, 1.2vw, 1.6rem);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+}
+
+.portrait-name-block .text {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 1rem;
+    color: #555;
+}
+
+.success-summary {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
+    column-gap: 12px;
+    border-left: 0;
+    text-align: left;
+}
+
+.success-summary p {
+    margin: 0;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #777;
+}
+
+.success-summary strong {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.square-chart {
+    padding-top: 5px;
+}
+
+.proposal-section {
+    padding: 10px 0 20px;
+}
+
+.proposal-section+.proposal-section {
+    padding-top: 10px;
+}
+
+.proposal-section h3 {
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-size: 0.95rem;
+    line-height: 1.2;
+}
+
+.proposal-section:first-child h3 {
+    color: #c85a43;
+}
+
+.proposal-section:nth-child(2) h3 {
+    color: #3f6fa9;
+}
+
+.proposal-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    max-width: 100%;
+}
+
+.proposal-square {
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    flex: 0 0 auto;
+    opacity: 0;
+    transform: translateY(5px) scale(0.75);
+    border-radius: 2px;
+}
+
+.swiper-slide-visible .proposal-square,
+.swiper-slide-active .proposal-square {
+    animation: square-appear 0.32s ease forwards;
+}
+
+@keyframes square-appear {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.interpellation-square {
+    background: transparent;
+    border: 2px solid #3f6fa9;
+}
+
+.interpellation-square.successful {
+    background: #3f6fa9;
+}
+
+.motion-square {
+    background: transparent;
+    border: 2px solid #c85a43;
+}
+
+.motion-square.successful {
+    background: #c85a43;
+}
+
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 34px;
+    align-items: center;
+    padding-top: 24px;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.legend-square {
+    width: 15px;
+    height: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+
+.legend-square.no-success {
+    background: transparent;
+    border: 2px solid black;
+}
+
+.legend-square.success {
+    background: black;
+    border: 2px solid black;
+}
+
+.successful-demo {
+    background: #fbfaf6;
+    border: 2px solid #2f6f2f;
+    color: #2f6f2f;
+    font-weight: 700;
+}
+
+@media (max-width: 900px) {
+    .portrait-card {
+        max-width: 620px;
+    }
+    .portrait-header {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        text-align: center;
+    }
+    .portrait-left img {
+        margin: 0 auto;
+    }
+    .portrait-name-block {
+        text-align: center;
+    }
+    .portrait-name-block .text {
+        text-align: center;
+    }
+    .success-summary {
+        border-left: 0;
+        border-top: 1px solid #d8d2c4;
+        padding-left: 0;
+        padding-top: 22px;
+        justify-content: center;
+        text-align: left;
+    }
+}
+
+@media (max-width: 700px) {
+    .title {
+        margin: 22px auto 0;
+    }
+    .swiper-slide {
+        min-height: 520px;
+        padding: 1px 12px 30px;
+    }
+    .newspaper-card {
+        padding: 26px 22px;
+    }
+    .portrait-name-block h2 {
+        font-size: 2.3rem;
+    }
+    .success-summary strong {
+        font-size: 3.8rem;
+    }
+    .proposal-section h3 {
+        font-size: 1.05rem;
+    }
+    .proposal-grid {
+        gap: 6px;
+    }
+    .proposal-square {
+        width: 16px;
+        height: 16px;
+        font-size: 12px;
+    }
+    .legend {
+        gap: 14px;
+        font-size: 0.82rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    .swiper-wrapper {
+        align-items: stretch !important;
+    }
+    .swiper-slide {
+        height: auto !important;
+        display: flex !important;
+        align-items: stretch !important;
+    }
+    .swiper-slide .newspaper-card {
+        width: 100%;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+    }
+    .portrait-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        padding-bottom: 6px;
+    }
+    .portrait-left img {
+        width: 92px;
+        height: 92px;
+    }
+    .portrait-name-block {
+        text-align: center;
+    }
+    .portrait-name-block h2 {
+        font-size: clamp(1.4rem, 1.7vw, 2.1rem);
+        text-align: center;
+    }
+    .bio_text {
+        text-align: center;
+        margin: 4px auto 10px;
+        padding: 0;
+    }
+    .success-summary {
+        border-left: 0;
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+    .success-summary strong {
+        font-size: 2.2rem;
+    }
+    .success-summary p {
+        margin-top: 4px;
+    }
+    .square-chart {
+        flex: 0;
+        padding-top: 6px;
+    }
+    .proposal-section {
+        padding: 10px 0 18px;
+    }
+    .proposal-section+.proposal-section {
+        padding-top: 8px;
+    }
+    .legend {
+        padding-top: 14px;
+    }
+}

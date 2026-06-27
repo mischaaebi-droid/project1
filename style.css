@@ -443,3 +443,16 @@ body {
         padding-top: 14px;
     }
 }
+
+@media (max-width: 999px) {
+    .swiper-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        transform: none !important;
+    }
+    .swiper-slide {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+}

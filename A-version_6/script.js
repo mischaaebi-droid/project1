@@ -161,21 +161,23 @@ Promise.all([
                     <div class="portrait-name-block">
                         
                         <h2>${displayName}</h2>
+                        <p class="bio_text">${person.chamber ?? ""}, Party: ${person.party ?? ""}, District: ${person.place ?? ""}</p>
                         
+                   
+
                     </div>
 
                     <div class="success-summary">
                         
-                        <div>
                        
-                            <p>Total success</p>
+                            <p>Total <br>success</p>
                             <strong>${success}</strong>
                             
-                        </div>
+            
                     </div>
                     
                 </div>
- <p class="bio_text">Party: ${person.party ?? ""}, District: ${person.place ?? ""}</p>
+ 
                 
 
                 <div class="square-chart">
