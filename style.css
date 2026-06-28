@@ -104,8 +104,8 @@ body {
 }
 
 .search-match .newspaper-card {
-    background: #f4f8ef;
-    border: 1px solid #7aa36f;
+    background: #f9f9f9;
+    border: 1px solid #b2b2b2;
 }
 
 .no-result {
@@ -143,7 +143,7 @@ body {
 
 .newspaper-card {
     background: white;
-    border: 1px solid #7aa36f;
+    border: 1px solid #9999;
     border-radius: 1px;
     padding: 22px 26px 20px;
 }
@@ -155,8 +155,8 @@ body {
     border: 1px solid #111;
     background: #111;
     color: #fbfaf6;
-    font-size: 1rem;
-    font-weight: 800;
+    font-size: 0.95rem;
+    font-weight: 700;
     letter-spacing: 0.08em;
 }
 
@@ -228,6 +228,10 @@ body {
     line-height: 1;
 }
 
+.suc {
+    font-weight: 700;
+}
+
 
 /* =========================================================
    6. Proposal charts
@@ -286,8 +290,9 @@ body {
     width: 10px;
     height: 10px;
     border: none;
-    border-radius: 50%;
-    background: #6678A6;
+    border-radius: 2px;
+    border: 2px solid #6678A6;
+    background: transparent;
     opacity: 0.80;
 }
 
@@ -340,6 +345,21 @@ body {
 .legend-square.success {
     border: 2px solid #B7924B;
     background: #B7924B;
+}
+
+.legend-square.interpell {
+    border: 2px solid #6678A6;
+    ;
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 9px;
+    height: 9px;
+    margin-bottom: 2px;
+    margin-right: 8px;
+    vertical-align: middle;
+    border-radius: 2px;
 }
 
 
@@ -454,6 +474,7 @@ body {
     .swiper-slide {
         width: 100% !important;
         margin: 0 !important;
+        height: auto !important;
         min-height: 0;
         padding: 0;
     }
@@ -476,22 +497,27 @@ body {
     }
     .search-section {
         margin: 22px auto 8px;
+        display: none;
     }
     .newspaper-card {
-        padding: 18px 16px 16px;
+        padding: 18px 16px 2px;
     }
     .rank-label {
         margin-bottom: 12px;
         padding: 5px 12px 4px;
         font-size: 0.8rem;
+        position: absolute;
+        top: 0px;
+        left: 0px;
     }
     .portrait-header {
         gap: 8px;
         padding-bottom: 4px;
     }
     .portrait-left img {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
+        margin-top: 15px;
     }
     .portrait-name-block h2 {
         margin-top: 15px;
@@ -534,12 +560,12 @@ body {
     }
     .legend {
         gap: 12px;
-        padding-top: 8px;
+        padding-top: 0px;
         font-size: 0.72rem;
     }
     .legend-square {
-        width: 12px;
-        height: 12px;
+        width: 10px;
+        height: 10px;
         margin-right: 5px;
     }
     .portrait-name-block {
@@ -549,20 +575,37 @@ body {
         display: none;
     }
     .portrait-name-block-handy {
-        display: block;
-        margin: 0 0 7px;
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: clamp(1rem, 1.2vw, 1.6rem);
-        line-height: 0.95;
-        letter-spacing: -0.05em;
+        display: flex;
+        flex-direction: column;
         flex: 1;
+        min-width: 0;
+        margin: 0 0 7px;
         text-align: left;
     }
     .portrait-name-block-handy h2 {
-        margin-top: 15px;
+        margin-top: 35px;
         margin-bottom: 4px;
-        font-size: 1.65rem;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1.25rem;
+        line-height: 1;
+        letter-spacing: -0.04em;
+        white-space: nowrap;
     }
+    .portrait-name-block-handy .bio_text {
+        white-space: nowrap;
+        font-size: 0.72rem;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 999px) {
+    .swiper {
+        overflow: visible;
+    }
+}
+
+.search-section-mobile {
+    width: 100%;
 }
 
 
@@ -577,7 +620,7 @@ body {
 
 .placeholder-rank {
     background: #fcfcfc;
-    border-color: #7aa36f;
+    border-color: #999999;
     color: #999999;
 }
 
@@ -634,4 +677,34 @@ body {
 
 .placeholder-grid {
     pointer-events: none;
+}
+
+.search-section-mobile {
+    display: none;
+}
+
+@media (max-width: 999px) {
+    .search-section-mobile {
+        display: block !important;
+        width: 100%;
+        max-width: 520px;
+        margin: 18px auto;
+        padding: 0 12px;
+        text-align: center;
+    }
+    .search-section-mobile label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        color: #0b0b0b;
+    }
+    .search-section-mobile input {
+        width: 100%;
+        padding: 13px 16px;
+        border: 1px solid #111;
+        font-size: 1rem;
+        text-align: center;
+    }
 }

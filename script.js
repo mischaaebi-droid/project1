@@ -1,4 +1,4 @@
-// Daten laden: Nationalräte und ihre parlamentarischen Statistiken
+// Daten laden: Nationalräte, Ständeräte und parlamentarische Statistiken
 Promise.all([
     fetch("nationalraete.json").then(function(response) {
         return response.json();
@@ -9,23 +9,17 @@ Promise.all([
     fetch("parlamentarier_stats.json").then(function(response) {
         return response.json();
     })
-])
-
-
-.then(function(loadedData) {
+]).then(function(loadedData) {
     const nationalraete = loadedData[0];
     const staenderaete = loadedData[1];
     const stats = loadedData[2];
-    const a = 0;
-    const wrapper = document.querySelector(".swiper-wrapper");
 
+    const wrapper = document.querySelector(".swiper-wrapper");
     const searchInput = document.querySelector("#politician-search");
     const searchList = document.querySelector("#politician-list");
     const searchResult = document.querySelector(".search-result");
 
-    const maxSlides = 30;
     let currentSort = "success_total";
-
 
     const statsByPersonCode = createStatsLookup(stats);
 
@@ -39,78 +33,9 @@ Promise.all([
         statsByPersonCode
     );
 
-
-    function createSearchList() {
-        const sortedData = getSortedData(currentSort);
-
-        const optionsHtml = sortedData.map(function(person) {
-            return `<option value="${formatName(person.name)}"></option>`;
-        });
-
-        searchList.innerHTML = optionsHtml.join("");
-    }
-
-    function activateSearch() {
-        searchInput.addEventListener("input", function() {
-            const searchTerm = searchInput.value.trim().toLowerCase();
-
-            if (searchTerm === "") {
-                searchResult.innerHTML = "";
-                return;
-            }
-
-            const sortedData = getSortedData(currentSort);
-
-            const foundIndex = sortedData.findIndex(function(person) {
-                const formattedName = formatName(person.name).toLowerCase();
-                const originalName = person.name.toLowerCase();
-
-                return (
-                    formattedName.includes(searchTerm) ||
-                    originalName.includes(searchTerm)
-                );
-            });
-
-            if (foundIndex === -1) {
-                searchResult.innerHTML = `<p class="no-result">No politician found.</p>`;
-                return;
-            }
-
-            const foundPerson = sortedData[foundIndex];
-
-            const topTwo = getSortedData(currentSort).slice(0, 2);
-            const newVisibleData = [
-                ...topTwo,
-                foundPerson
-            ];
-
-            const newHtml = newVisibleData.map(function(person, index) {
-                if (index === 2) {
-                    return createSlide(person, foundIndex).replace(
-                        '<div class="swiper-slide">',
-                        '<div class="swiper-slide search-match">'
-                    );
-                }
-
-                return createSlide(person, index);
-            });
-
-            wrapper.innerHTML = newHtml.join("");
-            searchResult.innerHTML = "";
-        });
-    }
-
-
-
-
-
-
-
     renderSlides(currentSort);
-    moveSearchForMobile();
     createSearchList();
     activateSearch();
-    activateSortButtons();
 
     function createStatsLookup(statsList) {
         const lookup = {};
@@ -129,6 +54,126 @@ Promise.all([
                 stats: statsLookup[person.person_code] || {}
             };
         });
+    }
+
+    function createSearchList() {
+        const sortedData = getSortedData(currentSort);
+
+        const optionsHtml = sortedData.map(function(person) {
+            return `<option value="${formatName(person.name)}"></option>`;
+        });
+
+        searchList.innerHTML = optionsHtml.join("");
+    }
+
+    function activateSearch() {
+        searchInput.addEventListener("input", function() {
+            handleSearch(searchInput.value, searchResult);
+        });
+
+        activateMobileSearch();
+    }
+
+    function activateMobileSearch() {
+        const mobileSearchInput = document.querySelector("#politician-search-mobile");
+        const mobileSearchResult = document.querySelector(".search-result-mobile");
+
+        if (!mobileSearchInput || !mobileSearchResult) {
+            return;
+        }
+
+        mobileSearchInput.addEventListener("input", function() {
+            handleSearch(mobileSearchInput.value, mobileSearchResult);
+        });
+    }
+
+    function handleSearch(searchValue, resultElement) {
+        const searchTerm = searchValue.trim().toLowerCase();
+
+        if (searchTerm === "") {
+            resultElement.innerHTML = "";
+            renderSlides(currentSort);
+            return;
+        }
+
+        const sortedData = getSortedData(currentSort);
+
+        const foundIndex = sortedData.findIndex(function(person) {
+            const formattedName = formatName(person.name).toLowerCase();
+            const originalName = person.name.toLowerCase();
+
+            return (
+                formattedName.includes(searchTerm) ||
+                originalName.includes(searchTerm)
+            );
+        });
+
+        if (foundIndex === -1) {
+            resultElement.innerHTML = `<p class="no-result">No politician found.</p>`;
+            return;
+        }
+
+        const foundPerson = sortedData[foundIndex];
+
+        renderSearchResult(foundPerson, foundIndex, searchValue);
+        resultElement.innerHTML = "";
+    }
+
+    function renderSearchResult(foundPerson, foundIndex, searchValue) {
+        const topTwo = getSortedData(currentSort).slice(0, 2);
+
+        const slideHtml = topTwo.map(function(person, index) {
+            return createSlide(person, index);
+        });
+
+        slideHtml.push(createMobileSearch(searchValue));
+
+        const resultSlide = createSlide(foundPerson, foundIndex).replace(
+            '<div class="swiper-slide">',
+            '<div class="swiper-slide search-match">'
+        );
+
+        slideHtml.push(resultSlide);
+
+        wrapper.innerHTML = slideHtml.join("");
+
+        activateMobileSearch();
+    }
+
+    function renderSlides(sortKey) {
+        const sortedData = getSortedData(sortKey);
+        const visibleData = sortedData.slice(0, 2);
+
+        const slideHtml = visibleData.map(function(person, index) {
+            return createSlide(person, index);
+        });
+
+        slideHtml.push(createMobileSearch(""));
+        slideHtml.push(createPlaceholderSlide());
+
+        wrapper.innerHTML = slideHtml.join("");
+
+        activateMobileSearch();
+    }
+
+    function createMobileSearch(searchValue) {
+        return `
+            <div class="search-section-mobile">
+                <label for="politician-search-mobile">
+                    How is your preferred politician ranked?
+                </label>
+
+                <input
+                    id="politician-search-mobile"
+                    list="politician-list"
+                    type="text"
+                    placeholder="Type his name..."
+                    autocomplete="off"
+                    value="${escapeHtml(searchValue)}">
+
+                <div class="search-result-mobile"></div>
+            </div>
+        `;
     }
 
     function formatName(name) {
@@ -167,7 +212,7 @@ Promise.all([
 
     function getRankLabel(rank) {
         if (rank === 1) {
-            return "WINNER";
+            return "Winner";
         }
 
         const lastTwoDigits = rank % 100;
@@ -196,95 +241,80 @@ Promise.all([
             const delay = delayOffset + i * 0.012;
 
             squares += `
-            <span 
-                class="proposal-square ${typeClass} ${isSuccessful ? "successful" : ""}"
-                style="animation-delay: ${delay}s"
-            >
-                ${isSuccessful ? "" : ""}
-            </span>
-        `;
+                <span
+                    class="proposal-square ${typeClass} ${isSuccessful ? "successful" : ""}"
+                    style="animation-delay: ${delay}s">
+                </span>
+            `;
         }
 
         return squares;
     }
 
-
     function createPlaceholderSlide() {
         return `
-        <div class="swiper-slide placeholder-slide">
-            <div class="portrait-card newspaper-card placeholder-card">
+            <div class="swiper-slide placeholder-slide">
+                <div class="portrait-card newspaper-card placeholder-card">
 
-                <div class="rank-label placeholder-rank">Search</div>
+                    <div class="rank-label placeholder-rank">Search</div>
 
-                <div class="portrait-header">
-                    <div class="portrait-main">
+                    <div class="portrait-header">
+                        <div class="portrait-main">
 
-                        <div class="portrait-left placeholder-head">
-                            <div class="head-circle"></div>
-                            <div class="shoulder-shape"></div>
+                            <div class="portrait-left placeholder-head">
+                                <div class="head-circle"></div>
+                                <div class="shoulder-shape"></div>
+                            </div>
+
+                            <div class="portrait-name-block-handy">
+                                <h2>Preferred politician?</h2>
+                                <p class="bio_text">
+                                    Type a name in search field above
+                                    <br>Total success?
+                                </p>
+                            </div>
+
+                            <div class="success-summary placeholder-success">
+                                <p>Total<br>success</p>
+                                <strong>?</strong>
+                            </div>
+
                         </div>
 
-                    
-                      <div class="portrait-name-block-handy">
-            <h2>Preferred Politican?</h2>
-            <p class="bio_text">
-                Type a name in search field above
-
-                 <br>Total success?
-        
-
-            </p>
-        </div>
-
-
-
-
-                        <div class="success-summary placeholder-success">
-                            <p>Total<br>success</p>
-                            <strong>?</strong>
-                        </div>
-
-                    </div>
-
-                    <div class="portrait-name-block">
-                        <h2>"Your" politican</h2>
-                        <p class="bio_text">
-                            Type a name in search field above
-                        </p>
-                    </div>
-                </div>
-
-                <div class="square-chart">
-
-                    <div class="proposal-section demands-section">
-                        <h3>Demands</h3>
-                        <div class="proposal-grid placeholder-grid">
-                            ${createSquares(18, 0, "motion-square placeholder-square", 0)}
+                        <div class="portrait-name-block">
+                            <h2>Your politician</h2>
+                            <p class="bio_text">
+                                Type a name in search field above
+                            </p>
                         </div>
                     </div>
 
-                    <div class="legend demand-legend">
-                        <span><i class="legend-square no-success"></i> No success</span>
-                        <span><i class="legend-square success"></i> Success</span>
-                    </div>
+                    <div class="square-chart">
 
-                    <div class="proposal-section questions-section">
-                        <h3>Inquiries</h3>
-                        <div class="proposal-grid placeholder-grid">
-                            ${createSquares(28, 0, "interpellation-square placeholder-square", 0)}
+                        <div class="proposal-section demands-section">
+                            <h3>Demands</h3>
+                            <div class="proposal-grid placeholder-grid">
+                                ${createSquares(18, 0, "motion-square placeholder-square", 0)}
+                            </div>
                         </div>
-                    </div>
 
+                        <div class="legend demand-legend">
+                            <span><i class="legend-square no-success"></i> No success</span>
+                            <span><i class="legend-square success"></i> Success</span>
+                        </div>
+
+                        <div class="proposal-section questions-section">
+                            <h3>Inquiries</h3>
+                            <div class="proposal-grid placeholder-grid">
+                                ${createSquares(28, 0, "interpellation-square placeholder-square", 0)}
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-        </div>
-    `;
+        `;
     }
-
-
-
-
-
 
     function createSlide(person, index) {
         const displayName = formatName(person.name);
@@ -299,130 +329,79 @@ Promise.all([
         const successfulMotionsAndPostulates = getPersonValue(person, "success_mot_and_post");
 
         return `
-        <div class="swiper-slide">
-            <div class="portrait-card newspaper-card">
+            <div class="swiper-slide">
+                <div class="portrait-card newspaper-card">
 
-             <div class="rank-label">${rankLabel}</div>
+                    <div class="rank-label">${rankLabel}</div>
 
-              
-<div class="portrait-header">
+                    <div class="portrait-header">
 
-    <div class="portrait-main">
+                        <div class="portrait-main">
 
-        <div class="portrait-left">
-            <img src="${person.image}" alt="${person.name}" loading="${imageLoading}">
-        </div>
+                            <div class="portrait-left">
+                                <img src="${person.image}" alt="${person.name}" loading="${imageLoading}">
+                            </div>
 
-        <div class="portrait-name-block-handy">
-            <h2>${displayName}</h2>
-            <p class="bio_text">
-                ${person.chamber ?? ""}, ${person.party ?? ""}, ${person.place ?? ""}
+                            <div class="portrait-name-block-handy">
+                                <h2>${displayName}</h2>
+                                <p class="bio_text">
+                                    ${person.chamber ?? ""}, ${person.party ?? ""}, ${person.place ?? ""}
+                                    <br><span class="suc">${success} success</span>
+                                </p>
+                            </div>
 
-                 <br>Total<suc> ${success}</suc> success
-        
+                            <div class="success-summary">
+                                <p>Total<br>success</p>
+                                <strong>${success}</strong>
+                            </div>
 
-            </p>
-        </div>
-
-
-  <div class="success-summary">
-        <p>Total<br>success</p>
-        <strong>${success}</strong>
-    </div>
-
-        
-
-    </div>
-
-        <div class="portrait-name-block">
-            <h2>${displayName}</h2>
-            <p class="bio_text">
-                ${person.chamber ?? ""}, ${person.party ?? ""}, ${person.place ?? ""}
-            </p>
-        </div>
-</div>
-                
-             <div class="square-chart">
-
-                   
-                    <div class="proposal-section demands-section">
-                        <h3> Demands</h3>
-                        <div class="proposal-grid">
-                            ${createSquares(motionsAndPostulates, successfulMotionsAndPostulates, "motion-square", 0.22)}
                         </div>
-                    </div>
 
-                    <div class="legend demand-legend">
-                        <span><i class="legend-square no-success"></i> No success</span>
-                        <span><i class="legend-square success"></i> Success</span>
-                        
-                    </div>
-
-
-
-
-                     <div class="proposal-section questions-section">
-                        <h3>Inquiries</h3>
-                        <div class="proposal-grid">
-                            ${createSquares(interpellations, successfulInterpellations, "interpellation-square", 0)}
+                        <div class="portrait-name-block">
+                            <h2>${displayName}</h2>
+                            <p class="bio_text">
+                                ${person.chamber ?? ""}, ${person.party ?? ""}, ${person.place ?? ""}
+                            </p>
                         </div>
+
                     </div>
 
+                    <div class="square-chart">
 
+                        <div class="proposal-section demands-section">
+                            <h3>Demands</h3>
+                            <div class="proposal-grid">
+                                ${createSquares(motionsAndPostulates, successfulMotionsAndPostulates, "motion-square", 0.22)}
+                            </div>
+                        </div>
+
+                        <div class="legend demand-legend">
+                            <span><i class="legend-square no-success"></i> No success</span>
+                            <span><i class="legend-square success"></i> Success</span>
+                        </div>
+
+                        <div class="proposal-section questions-section">
+                            <h3>Inquiries</h3>
+                            <div class="proposal-grid">
+                                ${createSquares(interpellations, successfulInterpellations, "interpellation-square", 0)}
+                            </div>
+                        </div>
+
+                        <div class="legend demand-legend">
+                            <span><i class="legend-square interpell"></i>Submission only, no approval required</span>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-        </div>
-    `;
+        `;
     }
 
-
-    function renderSlides(sortKey) {
-        const sortedData = getSortedData(sortKey);
-        const visibleData = sortedData.slice(0, 2);
-
-        const slideHtml = visibleData.map(function(person, index) {
-            return createSlide(person, index);
-        });
-
-        slideHtml.push(createPlaceholderSlide());
-
-        wrapper.innerHTML = slideHtml.join("");
-    }
-
-
-    function moveSearchForMobile() {
-
-        if (window.innerWidth > 999) {
-            return;
-        }
-
-        const search = document.querySelector(".search-section");
-        const slides = wrapper.querySelectorAll(".swiper-slide");
-
-        if (slides.length >= 2) {
-            slides[1].after(search);
-        }
-
-    }
-
-
-
-
-    function activateSortButtons() {
-        const sortButtons = document.querySelectorAll(".sort-button");
-
-        sortButtons.forEach(function(button) {
-            button.addEventListener("click", function() {
-                currentSort = button.dataset.sort;
-
-                sortButtons.forEach(function(otherButton) {
-                    otherButton.classList.remove("active");
-                });
-
-                button.classList.add("active");
-
-                renderSlides(currentSort);
-            });
-        });
+    function escapeHtml(text) {
+        return String(text)
+            .replaceAll("&", "&amp;")
+            .replaceAll('"', "&quot;")
+            .replaceAll("<", "&lt;")
+            .replaceAll(">", "&gt;");
     }
 });
