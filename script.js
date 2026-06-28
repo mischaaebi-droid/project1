@@ -199,7 +199,7 @@ Promise.all([
 
         const activeInput = window.innerWidth < 1000 ? mobileSearchInput : desktopSearchInput;
 
-        activeInput.focus();
+        activeInput.focus({ preventScroll: true });
         activeInput.setSelectionRange(
             activeInput.value.length,
             activeInput.value.length
