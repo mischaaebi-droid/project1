@@ -1,4 +1,4 @@
-// Daten laden: Nationalräte, Ständeräte und parlamentarische Statistiken
+//  laden: Nationalräte, Ständeräte und parlamentarische Statistiken
 Promise.all([
     fetch("nationalraete.json").then(function(response) {
         return response.json();
@@ -15,9 +15,12 @@ Promise.all([
     const stats = loadedData[2];
 
     const wrapper = document.querySelector(".swiper-wrapper");
-    const searchInput = document.querySelector("#politician-search");
-    const searchList = document.querySelector("#politician-list");
-    const searchResult = document.querySelector(".search-result");
+    let searchInput = document.querySelector("#politician-search");
+    let searchSuggestions = document.querySelector(".search-suggestions");
+    let searchResult = document.querySelector(".search-result");
+
+    const desktopSearchInput = document.querySelector("#politician-search");
+    const mobileSearchInput = document.querySelector("#politician-search-mobile");
 
     let currentSort = "success_total";
 
@@ -34,7 +37,7 @@ Promise.all([
     );
 
     renderSlides(currentSort);
-    createSearchList();
+    renderSuggestions("");
     activateSearch();
 
     function createStatsLookup(statsList) {
@@ -56,36 +59,72 @@ Promise.all([
         });
     }
 
-    function createSearchList() {
-        const sortedData = getSortedData(currentSort);
 
-        const optionsHtml = sortedData.map(function(person) {
-            return `<option value="${formatName(person.name)}"></option>`;
-        });
-
-        searchList.innerHTML = optionsHtml.join("");
-    }
 
     function activateSearch() {
-        searchInput.addEventListener("input", function() {
-            handleSearch(searchInput.value, searchResult);
-        });
+        if (desktopSearchInput) {
+            desktopSearchInput.addEventListener("input", function() {
+                handleSearch(desktopSearchInput.value, searchResult);
+            });
+        }
 
-        activateMobileSearch();
+        if (mobileSearchInput) {
+            mobileSearchInput.addEventListener("input", function() {
+                handleSearch(mobileSearchInput.value, document.querySelector(".search-result-mobile"));
+            });
+        }
     }
 
-    function activateMobileSearch() {
-        const mobileSearchInput = document.querySelector("#politician-search-mobile");
-        const mobileSearchResult = document.querySelector(".search-result-mobile");
 
-        if (!mobileSearchInput || !mobileSearchResult) {
+
+
+
+
+
+    function renderSuggestions(searchValue) {
+        const searchTerm = searchValue.trim().toLowerCase();
+        const sortedData = getSortedData(currentSort);
+
+        let suggestions = sortedData;
+
+        if (searchTerm !== "") {
+            suggestions = sortedData.filter(function(person) {
+                const formattedName = formatName(person.name).toLowerCase();
+                const originalName = person.name.toLowerCase();
+
+                return (
+                    formattedName.includes(searchTerm) ||
+                    originalName.includes(searchTerm)
+                );
+            });
+        }
+
+        const visibleSuggestions = suggestions.slice(0, 8);
+
+        if (visibleSuggestions.length === 0) {
+            searchSuggestions.innerHTML = `<p class="no-result">No politician found.</p>`;
             return;
         }
 
-        mobileSearchInput.addEventListener("input", function() {
-            handleSearch(mobileSearchInput.value, mobileSearchResult);
+        const suggestionsHtml = visibleSuggestions.map(function(person) {
+            const displayName = formatName(person.name);
+
+            return `
+            <button class="search-suggestion" type="button">
+                ${displayName}
+            </button>
+        `;
         });
+
+        searchSuggestions.innerHTML = suggestionsHtml.join("");
     }
+
+
+
+
+
+
+
 
     function handleSearch(searchValue, resultElement) {
         const searchTerm = searchValue.trim().toLowerCase();
@@ -95,6 +134,11 @@ Promise.all([
             renderSlides(currentSort);
             return;
         }
+
+
+
+
+
 
         const sortedData = getSortedData(currentSort);
 
@@ -126,18 +170,41 @@ Promise.all([
             return createSlide(person, index);
         });
 
-        slideHtml.push(createMobileSearch(searchValue));
-
         const resultSlide = createSlide(foundPerson, foundIndex).replace(
             '<div class="swiper-slide">',
             '<div class="swiper-slide search-match">'
         );
 
+
         slideHtml.push(resultSlide);
 
         wrapper.innerHTML = slideHtml.join("");
 
-        activateMobileSearch();
+        const activeInput = window.innerWidth < 1000 ? mobileSearchInput : desktopSearchInput;
+
+        activeInput.focus();
+        activeInput.setSelectionRange(
+            activeInput.value.length,
+            activeInput.value.length
+        );
+
+        if (window.innerWidth < 1000) {
+            const cards = document.querySelectorAll(".swiper-slide");
+
+            if (cards.length >= 3) {
+                window.scrollTo({
+                    top: cards[2].offsetTop - 20,
+                    behavior: "smooth"
+                });
+            }
+        }
+
+
+
+
+
+
+
     }
 
     function renderSlides(sortKey) {
@@ -148,33 +215,12 @@ Promise.all([
             return createSlide(person, index);
         });
 
-        slideHtml.push(createMobileSearch(""));
         slideHtml.push(createPlaceholderSlide());
 
         wrapper.innerHTML = slideHtml.join("");
-
-        activateMobileSearch();
     }
 
-    function createMobileSearch(searchValue) {
-        return `
-            <div class="search-section-mobile">
-                <label for="politician-search-mobile">
-                    How is your preferred politician ranked?
-                </label>
 
-                <input
-                    id="politician-search-mobile"
-                    list="politician-list"
-                    type="text"
-                    placeholder="Type his name..."
-                    autocomplete="off"
-                    value="${escapeHtml(searchValue)}">
-
-                <div class="search-result-mobile"></div>
-            </div>
-        `;
-    }
 
     function formatName(name) {
         const specialNames = {
@@ -251,12 +297,18 @@ Promise.all([
         return squares;
     }
 
+
+
+
+
+
+
     function createPlaceholderSlide() {
         return `
             <div class="swiper-slide placeholder-slide">
                 <div class="portrait-card newspaper-card placeholder-card">
 
-                    <div class="rank-label placeholder-rank">Search</div>
+                    <div class="rank-label placeholder-rank">rank</div>
 
                     <div class="portrait-header">
                         <div class="portrait-main">
@@ -270,14 +322,11 @@ Promise.all([
                                 <h2>Preferred politician?</h2>
                                 <p class="bio_text">
                                     Type a name in search field above
-                                    <br>Total success?
+                                    
                                 </p>
                             </div>
 
-                            <div class="success-summary placeholder-success">
-                                <p>Total<br>success</p>
-                                <strong>?</strong>
-                            </div>
+                           
 
                         </div>
 
@@ -294,19 +343,16 @@ Promise.all([
                         <div class="proposal-section demands-section">
                             <h3>Demands</h3>
                             <div class="proposal-grid placeholder-grid">
-                                ${createSquares(18, 0, "motion-square placeholder-square", 0)}
+                                ${createSquares(10, 0, "motion-square placeholder-square", 0)}
                             </div>
                         </div>
 
-                        <div class="legend demand-legend">
-                            <span><i class="legend-square no-success"></i> No success</span>
-                            <span><i class="legend-square success"></i> Success</span>
-                        </div>
+                        
 
                         <div class="proposal-section questions-section">
                             <h3>Inquiries</h3>
                             <div class="proposal-grid placeholder-grid">
-                                ${createSquares(28, 0, "interpellation-square placeholder-square", 0)}
+                                ${createSquares(5, 0, "interpellation-square placeholder-square", 0)}
                             </div>
                         </div>
 

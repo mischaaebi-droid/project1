@@ -31,11 +31,11 @@
 
 
 
-        <div class="search-section">
-            <label for="politician-search">How is your preferred Politican?</label>
+        <div class="search-section search-section-desktop">
+            <label for="politician-search">Check with another parliamentarian</label>
 
             <input id="politician-search" list="politician-list" type="text" placeholder="Type his name..." autocomplete="off">
-
+            <div class="search-suggestions"></div>
             <datalist id="politician-list"></datalist>
 
             <div class="search-result"></div>
@@ -48,6 +48,37 @@
             <div class="swiper-wrapper">
             </div>
         </div>
+
+        <div class="search-section search-section-mobile">
+            <label for="politician-search-mobile">
+        How is your preferred politician ranked?
+    </label>
+
+            <input id="politician-search-mobile" type="text" placeholder="Type a name..." autocomplete="off">
+
+            <div class="search-suggestions-mobile"></div>
+            <div class="search-result-mobile"></div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <p class="text">
             Broulis submitted 18 proposals. Eleven were approved by both chambers of parliament and forwarded to the federal government for implementation. No other member of the federal parliament has successfully passed as many proposals during this legislative
