@@ -83,7 +83,7 @@ Promise.all([
                     if (mobileSearchInput.value.trim() !== "") {
                         mobileSearchInput.blur();
                     }
-                }, 2000);
+                }, 900);
             });
         }
 
@@ -205,7 +205,16 @@ Promise.all([
             activeInput.value.length
         );
 
+        if (window.innerWidth < 1000) {
+            const cards = document.querySelectorAll(".swiper-slide");
 
+            if (cards.length >= 3) {
+                window.scrollTo({
+                    top: cards[2].offsetTop - 20,
+                    behavior: "smooth"
+                });
+            }
+        }
 
 
 

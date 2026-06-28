@@ -37,8 +37,19 @@ body {
     text-align: left;
     font-size: 3rem;
     font-weight: 700;
-    line-height: 1;
+    line-height: 1.2;
     color: #0b0b0b;
+}
+
+h4 {
+    max-width: 700px;
+    margin: 17px auto -10px;
+    padding: 0 10px;
+}
+
+h4+.text {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
 
 .lead {
@@ -54,9 +65,9 @@ body {
 
 .text {
     max-width: 700px;
-    margin: 14px auto 24px;
+    margin: 0px auto 10px;
     font-family: Baskerville, Georgia, "Times New Roman", serif;
-    padding: 0 20px;
+    padding: 0 10px;
     font-size: 1rem;
     line-height: 1.5;
     color: #1a1a1a;
@@ -495,6 +506,13 @@ body {
     }
     .title h1 {
         font-size: 1.75rem;
+        margin: 0px;
+        padding: 0px;
+    }
+    .lead {
+        margin: 8px;
+        margin-top: 20px;
+        padding: 0px;
     }
     .text {
         margin: 10px auto 14px;
@@ -733,4 +751,24 @@ body {
 .search-section-desktop .search-suggestions,
 .search-section-desktop .search-result {
     display: none;
+}
+
+.single-politician-card {
+    width: 100%;
+    max-width: 340px;
+    margin: 30px auto;
+}
+
+@media (max-width: 999px) {
+    .search-section-mobile {
+        position: sticky;
+        bottom: 0;
+        z-index: 50;
+        background: white;
+        padding: 8px 0 10px;
+        margin: 0 auto !important;
+    }
+    body {
+        padding-bottom: 90px;
+    }
 }
