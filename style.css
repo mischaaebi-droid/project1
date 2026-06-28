@@ -31,10 +31,14 @@ body {
 }
 
 .title h1 {
-    margin: 0;
-    font-size: clamp(2rem, 3.5vw, 3.2rem);
-    line-height: 1.05;
-    letter-spacing: -0.04em;
+    max-width: 700px;
+    margin: 14px auto 24px;
+    padding: 0 20px;
+    text-align: left;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #0b0b0b;
 }
 
 .lead {
@@ -124,7 +128,7 @@ body {
 
 .swiper {
     width: 100%;
-    padding: 0 0 20px;
+    padding: 0 0 0px;
     overflow: hidden;
 }
 
@@ -699,16 +703,21 @@ body {
     .search-section-mobile {
         display: block !important;
         width: 100%;
-        max-width: 520px;
-        margin: 0px auto;
-        padding: 0 12px;
         text-align: center;
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 0;
     }
     .search-section-mobile label {
         display: block;
         margin-bottom: 8px;
         font-size: 1.1rem;
         font-weight: 700;
+        margin-top: 15px;
         letter-spacing: 0.08em;
         color: #0b0b0b;
     }
