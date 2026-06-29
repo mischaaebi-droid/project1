@@ -411,7 +411,7 @@ Promise.all([
             <div class="swiper-slide placeholder-slide">
                 <div class="portrait-card newspaper-card placeholder-card">
 
-                    <div class="rank-label placeholder-rank">rank</div>
+                    <div class="rank-label placeholder-rank">rank?</div>
 
                     <div class="portrait-header">
                         <div class="portrait-main">
@@ -422,7 +422,7 @@ Promise.all([
                             </div>
 
                             <div class="portrait-name-block-handy">
-                                <h2>Preferred politician?</h2>
+                                <h2>"Your" politician?</h2>
                                 <p class="bio_text">
                                     Type a name in search field above
                                     
@@ -434,7 +434,7 @@ Promise.all([
                         </div>
 
                         <div class="portrait-name-block">
-                            <h2>Your politician</h2>
+                            <h2>"Your" politician</h2>
                             <p class="bio_text">
                                 Type a name in search field above
                             </p>
