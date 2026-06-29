@@ -68,13 +68,17 @@ Promise.all([
         }
 
         if (mobileSearchInput) {
+            let keyboardTimer;
             mobileSearchInput.addEventListener("focus", function() {
                 setTimeout(function() {
                     lockThirdCardToTop();
                 }, 350);
             });
 
+
+
             mobileSearchInput.addEventListener("input", function() {
+
                 handleSearch(
                     mobileSearchInput.value,
                     document.querySelector(".search-result-mobile")
@@ -83,68 +87,85 @@ Promise.all([
                 requestAnimationFrame(function() {
                     lockThirdCardToTop();
                 });
+
+                clearTimeout(keyboardTimer);
+
+                keyboardTimer = setTimeout(function() {
+                    mobileSearchInput.blur();
+                }, 2000);
             });
         }
 
-        const mobileSearchSection = document.querySelector(".search-section-mobile");
 
-        function positionMobileSearchAboveKeyboard() {
-            if (!window.visualViewport || !mobileSearchSection) {
-                return;
-            }
 
-            const keyboardHeight =
-                window.innerHeight -
-                window.visualViewport.height -
-                window.visualViewport.offsetTop;
 
-            const searchOffset = 110;
 
-            mobileSearchSection.style.bottom =
-                Math.max(0, keyboardHeight - searchOffset) + "px";
+
+
+    }
+
+    const mobileSearchSection = document.querySelector(".search-section-mobile");
+
+    function positionMobileSearchAboveKeyboard() {
+        if (!window.visualViewport || !mobileSearchSection) {
+            return;
         }
 
-        if (mobileSearchInput && mobileSearchSection) {
-            mobileSearchInput.addEventListener("focus", function() {
-                mobileSearchSection.classList.add("keyboard-active");
+        const keyboardHeight =
+            window.innerHeight -
+            window.visualViewport.height -
+            window.visualViewport.offsetTop;
+
+        const searchOffset = 110;
+
+        mobileSearchSection.style.bottom =
+            Math.max(0, keyboardHeight - searchOffset) + "px";
+    }
+
+    if (mobileSearchInput && mobileSearchSection) {
+        mobileSearchInput.addEventListener("focus", function() {
+            mobileSearchSection.classList.add("keyboard-active");
+            positionMobileSearchAboveKeyboard();
+
+            lockThirdCardToTop();
+
+            setTimeout(function() {
+                positionMobileSearchAboveKeyboard();
+                lockThirdCardToTop();
+            }, 250);
+
+            setTimeout(function() {
+                positionMobileSearchAboveKeyboard();
+                lockThirdCardToTop();
+            }, 500);
+
+            setTimeout(function() {
+                positionMobileSearchAboveKeyboard();
+                lockThirdCardToTop();
+            }, 750);
+        });
+
+        mobileSearchInput.addEventListener("blur", function() {
+            mobileSearchSection.classList.remove("keyboard-active");
+            mobileSearchSection.style.bottom = "";
+        });
+
+        if (window.visualViewport) {
+            window.visualViewport.addEventListener("resize", function() {
                 positionMobileSearchAboveKeyboard();
 
-                lockThirdCardToTop();
-
-                setTimeout(function() {
-                    positionMobileSearchAboveKeyboard();
-                    lockThirdCardToTop();
-                }, 250);
-
-                setTimeout(function() {
-                    positionMobileSearchAboveKeyboard();
-                    lockThirdCardToTop();
-                }, 500);
-
-                setTimeout(function() {
-                    positionMobileSearchAboveKeyboard();
-                    lockThirdCardToTop();
-                }, 750);
+                if (document.activeElement === mobileSearchInput) {
+                    setTimeout(lockThirdCardToTop, 50);
+                }
             });
 
-            mobileSearchInput.addEventListener("blur", function() {
-                mobileSearchSection.classList.remove("keyboard-active");
-                mobileSearchSection.style.bottom = "";
-            });
-
-            if (window.visualViewport) {
-                window.visualViewport.addEventListener(
-                    "resize",
-                    positionMobileSearchAboveKeyboard
-                );
-
-                window.visualViewport.addEventListener(
-                    "scroll",
-                    positionMobileSearchAboveKeyboard
-                );
-            }
+            window.visualViewport.addEventListener(
+                "scroll",
+                positionMobileSearchAboveKeyboard
+            );
         }
     }
+
 
     function lockThirdCardToTop() {
         if (window.innerWidth >= 1000) {
@@ -160,7 +181,7 @@ Promise.all([
         const thirdCardTop =
             cards[2].getBoundingClientRect().top + window.scrollY;
 
-        const mobileSearchSpace = 80;
+        const mobileSearchSpace = -20;
 
         window.scrollTo({
             top: thirdCardTop + mobileSearchSpace,

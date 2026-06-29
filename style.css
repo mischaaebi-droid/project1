@@ -306,8 +306,8 @@ h4+.text {
 }
 
 .interpellation-square {
-    width: 10px;
-    height: 10px;
+    width: 13px;
+    height: 13px;
     border: none;
     border-radius: 2px;
     border: 2px solid #6678A6;
@@ -336,7 +336,7 @@ h4+.text {
     align-items: center;
     padding-top: 20px;
     color: #444;
-    font-size: 0.87rem;
+    font-size: 0.8rem;
 }
 
 .demand-legend {
@@ -526,7 +526,7 @@ h4+.text {
         display: block;
     }
     .newspaper-card {
-        padding: 18px 16px 2px;
+        padding: 4px 16px 2px;
         border: 2px solid #9999;
     }
     .rank-label {
@@ -535,7 +535,7 @@ h4+.text {
         font-size: 0.8rem;
         position: absolute;
         top: 0px;
-        left: 0px;
+        right: 0px;
     }
     .portrait-header {
         gap: 8px;
@@ -544,7 +544,7 @@ h4+.text {
     .portrait-left img {
         width: 80px;
         height: 80px;
-        margin-top: 15px;
+        margin-top: 5px;
     }
     .portrait-name-block h2 {
         margin-top: 15px;
@@ -610,7 +610,7 @@ h4+.text {
         text-align: left;
     }
     .portrait-name-block-handy h2 {
-        margin-top: 35px;
+        margin-top: 25px;
         margin-bottom: 4px;
         font-family: Georgia, "Times New Roman", serif;
         font-size: 1.25rem;

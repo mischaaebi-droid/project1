@@ -1,13 +1,13 @@
 const FIXED_SORT_KEY = "success_total";
 
 Promise.all([
-    fetch("nationalraete.json").then(function(response) {
+    fetch("bio_nationalcounsil_scraped.json").then(function(response) {
         return response.json();
     }),
-    fetch("staenderaete.json").then(function(response) {
+    fetch("bio_statescounsil_scraped.json").then(function(response) {
         return response.json();
     }),
-    fetch("parlamentarier_stats.json").then(function(response) {
+    fetch("analysed_affaires.json").then(function(response) {
         return response.json();
     })
 ]).then(function(loadedData) {
