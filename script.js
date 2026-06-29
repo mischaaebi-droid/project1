@@ -60,7 +60,6 @@ Promise.all([
     }
 
 
-
     function activateSearch() {
         if (desktopSearchInput) {
             desktopSearchInput.addEventListener("input", function() {
@@ -69,30 +68,88 @@ Promise.all([
         }
 
         if (mobileSearchInput) {
-            let mobileKeyboardTimer;
+
+            let keyboardTimer;
 
             mobileSearchInput.addEventListener("input", function() {
+
                 handleSearch(
                     mobileSearchInput.value,
                     document.querySelector(".search-result-mobile")
                 );
 
-                clearTimeout(mobileKeyboardTimer);
+                requestAnimationFrame(function() {
+                    lockThirdCardToTop();
+                });
 
-                mobileKeyboardTimer = setTimeout(function() {
-                    if (mobileSearchInput.value.trim() !== "") {
-                        mobileSearchInput.blur();
-                    }
-                }, 2000);
+                clearTimeout(keyboardTimer);
+
+                keyboardTimer = setTimeout(function() {
+                    mobileSearchInput.blur();
+                }, 1450);
             });
         }
 
+        const mobileSearchSection = document.querySelector(".search-section-mobile");
 
+        function positionMobileSearchAboveKeyboard() {
+            if (!window.visualViewport || !mobileSearchSection) {
+                return;
+            }
 
+            const keyboardHeight =
+                window.innerHeight -
+                window.visualViewport.height -
+                window.visualViewport.offsetTop;
 
+            const searchOffset = 70;
+
+            mobileSearchSection.style.bottom =
+                Math.max(0, keyboardHeight - searchOffset) + "px";
+        }
+
+        if (mobileSearchInput && mobileSearchSection) {
+            mobileSearchInput.addEventListener("focus", function() {
+                lockThirdCardToTop();
+                mobileSearchSection.classList.add("keyboard-active");
+                positionMobileSearchAboveKeyboard();
+            });
+
+            mobileSearchInput.addEventListener("blur", function() {
+                mobileSearchSection.classList.remove("keyboard-active");
+                mobileSearchSection.style.bottom = "";
+            });
+
+            if (window.visualViewport) {
+                window.visualViewport.addEventListener(
+                    "resize",
+                    positionMobileSearchAboveKeyboard
+                );
+
+                window.visualViewport.addEventListener(
+                    "scroll",
+                    positionMobileSearchAboveKeyboard
+                );
+            }
+        }
     }
 
+    function lockThirdCardToTop() {
+        if (window.innerWidth >= 1000) {
+            return;
+        }
 
+        const cards = document.querySelectorAll(".swiper-slide");
+
+        if (cards.length < 3) {
+            return;
+        }
+
+        window.scrollTo({
+            top: cards[2].offsetTop,
+            behavior: "auto"
+        });
+    }
 
 
 
@@ -196,6 +253,7 @@ Promise.all([
         slideHtml.push(resultSlide);
 
         wrapper.innerHTML = slideHtml.join("");
+        lockThirdCardToTop();
 
         const activeInput = window.innerWidth < 1000 ? mobileSearchInput : desktopSearchInput;
 
