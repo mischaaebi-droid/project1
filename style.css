@@ -18,6 +18,10 @@ body {
     padding: 0 32px;
 }
 
+.newspaper-card {
+    position: relative;
+}
+
 
 /* =========================================================
    2. Text and title
@@ -79,6 +83,15 @@ h4+.text {
     font-size: 0.85rem;
     line-height: 1.5;
     color: #555;
+}
+
+.source {
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+    font-size: 0.5rem;
+    color: #888;
+    line-height: 1;
 }
 
 
