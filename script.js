@@ -68,11 +68,13 @@ Promise.all([
         }
 
         if (mobileSearchInput) {
-
-            let keyboardTimer;
+            mobileSearchInput.addEventListener("focus", function() {
+                setTimeout(function() {
+                    lockThirdCardToTop();
+                }, 350);
+            });
 
             mobileSearchInput.addEventListener("input", function() {
-
                 handleSearch(
                     mobileSearchInput.value,
                     document.querySelector(".search-result-mobile")
@@ -81,12 +83,6 @@ Promise.all([
                 requestAnimationFrame(function() {
                     lockThirdCardToTop();
                 });
-
-                clearTimeout(keyboardTimer);
-
-                keyboardTimer = setTimeout(function() {
-                    mobileSearchInput.blur();
-                }, 1450);
             });
         }
 
@@ -102,7 +98,7 @@ Promise.all([
                 window.visualViewport.height -
                 window.visualViewport.offsetTop;
 
-            const searchOffset = 70;
+            const searchOffset = 110;
 
             mobileSearchSection.style.bottom =
                 Math.max(0, keyboardHeight - searchOffset) + "px";
@@ -110,9 +106,25 @@ Promise.all([
 
         if (mobileSearchInput && mobileSearchSection) {
             mobileSearchInput.addEventListener("focus", function() {
-                lockThirdCardToTop();
                 mobileSearchSection.classList.add("keyboard-active");
                 positionMobileSearchAboveKeyboard();
+
+                lockThirdCardToTop();
+
+                setTimeout(function() {
+                    positionMobileSearchAboveKeyboard();
+                    lockThirdCardToTop();
+                }, 250);
+
+                setTimeout(function() {
+                    positionMobileSearchAboveKeyboard();
+                    lockThirdCardToTop();
+                }, 500);
+
+                setTimeout(function() {
+                    positionMobileSearchAboveKeyboard();
+                    lockThirdCardToTop();
+                }, 750);
             });
 
             mobileSearchInput.addEventListener("blur", function() {
@@ -145,12 +157,16 @@ Promise.all([
             return;
         }
 
+        const thirdCardTop =
+            cards[2].getBoundingClientRect().top + window.scrollY;
+
+        const mobileSearchSpace = 80;
+
         window.scrollTo({
-            top: cards[2].offsetTop,
+            top: thirdCardTop + mobileSearchSpace,
             behavior: "auto"
         });
     }
-
 
 
 

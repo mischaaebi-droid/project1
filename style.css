@@ -760,15 +760,11 @@ h4+.text {
 }
 
 @media (max-width: 999px) {
-    .search-section-mobile {
-        position: sticky;
-        bottom: 0;
-        z-index: 50;
-        background: white;
-        padding: 8px 0 10px;
-        margin: 0 auto !important;
+    .swiper-wrapper {
+        gap: 14px;
     }
-    body {
-        padding-bottom: 90px;
+    .search-section-mobile {
+        margin-top: 0 !important;
+        padding-top: 6px;
     }
 }
