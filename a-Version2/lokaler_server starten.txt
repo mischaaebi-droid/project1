@@ -1,4 +1,0 @@
-
-an Konsole:
-cd \Users\misch\lede_homework_achiv\project1
-py -m http.server 8001
